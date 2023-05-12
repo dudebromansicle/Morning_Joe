@@ -1,0 +1,7 @@
+
+name=SCENEMANAGER
+author=Mpat.
+description=manage scene.
+bundleID=com.panic.SCENEMANAGER
+version=0.01
+buildNumber=123
