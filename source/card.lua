@@ -48,6 +48,7 @@ function Card:init(place)
 
 end
 
+
 function Card:update()
     
     if SelectionArray[1] == self.spot then
@@ -79,7 +80,6 @@ function Card:update()
         end
     end
 
-    
     
     
     self:moveTo(self.x+(self.MyX-self.x)/2,self.y+(self.MyY-self.y)/2)

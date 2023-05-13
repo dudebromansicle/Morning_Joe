@@ -2,6 +2,7 @@
 import "CoreLibs/sprites"
 import "gameScene"
 import "customer"
+import "finalDrink"
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
@@ -21,6 +22,7 @@ function DrinkBar:init()
     gfx.popContext()
     self:setImage(RectImage)
     self:add()
+    self.donebefore = false
 
 end
 
@@ -52,9 +54,11 @@ function DrinkBar:update()
         self:moveTo(100+DrinkBarsLength/2, 130)
     end
 
-    if DrinkBarsLength > 156 and DrinkBarsLength < 160 then
+    if DrinkBarsLength > 159 and self.donebefore == false then
         DrinkBarsLength = 160
+        FinalDrink()
         TasteDrink()
+        self.donebefore = true
     end
 
 
