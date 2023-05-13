@@ -35,12 +35,34 @@ function Card:init(place)
 end
 
 function Card:update()
-    if self.spot == currentingrident then
-        self.MyY = 180 
+    
+    if SelectionArray[1] == self.spot then
+        self.MyX = 130
+        self.MyY = 130 
+    elseif SelectionArray[2] == self.spot then
+        self.MyX = 180
+        self.MyY = 130 
+    elseif SelectionArray[3] == self.spot then
+        self.MyX = 230
+        self.MyY = 130 
     else
-        self.MyY = 210 
+        if self.spot == currentingrident then
+            self.MyX = 23+(50*(self.spot-1))
+            self.MyY = 180 
+        else
+            self.MyX = 23+(50*(self.spot-1))
+            self.MyY = 200 
+        end
+
+        if #SelectionArray > 2 then
+            self.MyY = 260
+        end
     end
-    self:moveTo(self.x,self.y+(self.MyY-self.y)/2)
+
+    
+    
+    
+    self:moveTo(self.x+(self.MyX-self.x)/2,self.y+(self.MyY-self.y)/2)
 end
     
     

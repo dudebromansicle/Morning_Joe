@@ -1,5 +1,11 @@
 import "gameOverScene"
 import "card"
+import "DrinkBar"
+
+
+import "ingridenttext"
+
+import "CoreLibs/crank"
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
@@ -7,20 +13,19 @@ local gfx <const> = playdate.graphics
 class('GameScene').extends(gfx.sprite)
 
 function GameScene:init()
-	local text = "This Will be the Game"
-    local gameOverImage = gfx.image.new(gfx.getTextSize(text))
-    gfx.pushContext(gameOverImage)
-        gfx.drawText(text, 0, 0)
-    gfx.popContext()
-    local gameOverSprite = gfx.sprite.new(gameOverImage)
-    gameOverSprite:moveTo(200, 120)
-    gameOverSprite:add()
-
+    crankinstruction = false
+	GameScene.super.init(self)
     currentingrident = 1
+    SelectionArray = {0}
 
     self:add()
+    self.currentpick = 1
+    self.drinkmade = false
     MyMax = 8
     CreateDecks(MyMax)
+    
+    IngridentText(currentingrident)
+    DrinkBar()
 
 end
 
@@ -33,15 +38,30 @@ end
 
 function Ingrident(NewValue) 
     currentingrident = currentingrident + NewValue
+    while currentingrident == SelectionArray[1] or currentingrident == SelectionArray[2] or currentingrident == SelectionArray[3] do
+        currentingrident = currentingrident + NewValue
+    end 
+
     if currentingrident > MyMax then
         currentingrident = 1
     elseif currentingrident < 1 then
         currentingrident = MyMax
     end
-    print(currentingrident)
+    print("Ingrident:"..currentingrident)
+    if #SelectionArray < 3 then
+        
+        IngridentText(currentingrident)
+    end
+    
+end
+
+
+function SelectThis() 
+        
 end
 
 function GameScene:update()
+
    
     if pd.buttonJustPressed(pd.kButtonRight) then
         Ingrident(1)
@@ -50,9 +70,49 @@ function GameScene:update()
     if pd.buttonJustPressed(pd.kButtonLeft) then
         Ingrident(-1)
     end
-
-    if pd.buttonJustPressed(pd.kButtonA) then
+    --add drink made
+    if pd.buttonJustPressed(pd.kButtonA) and self.currentpick == 4 then
+       
+        self.drinkmade = true 
+        crankinstruction = false
         SCENE_MANAGER:switchScene(GameOverScene)
     end
 
+    if pd.buttonJustPressed(pd.kButtonA) and self.currentpick < 4 then
+        --SCENE_MANAGER:switchScene(GameOverScene)
+        SelectionArray[self.currentpick] = currentingrident
+        
+        for i = 1,#SelectionArray do 
+            print("SelectionArray:"..SelectionArray[i])
+        end
+        self.currentpick = self.currentpick + 1
+        Ingrident(1)
+
+
+    end
+    
+    
+    
+    if pd.buttonJustPressed(pd.kButtonB) and self.currentpick > 1 then
+        self.currentpick = self.currentpick - 1
+
+        table.remove(SelectionArray,self.currentpick)
+
+        
+        for i = 1,#SelectionArray do 
+            print("SelectionArray:"..SelectionArray[i])
+        end
+
+    end
+    if #SelectionArray == 3 and self.drinkmade == false then
+        crankinstruction = true
+        local currentcranks = pd.getCrankTicks(6)
+        --print("currentcranks: "..currentcranks)
+        DrinkBarIncrease(currentcranks)
+    else
+        crankinstruction = false
+    end
+    
+    
+    
 end
