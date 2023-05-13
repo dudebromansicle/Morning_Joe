@@ -20,9 +20,9 @@ function FinalDrink:init()
     
     self:moveTo(94,110)
 
-    self.MyX = 200-(self.width/2)
+    self.MyX = 170-(self.width/2)
 
-    self.MyY = 130 
+    self.MyY = 125 
     self:setZIndex(300)
     self:add()
 

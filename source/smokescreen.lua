@@ -22,9 +22,9 @@ function SmokeScreen:init()
     self:setZIndex(900)
     self:add()
     
-    self.MyX = 136
+    self.MyX = 116
 
-    self.MyY = 130 
+    self.MyY = 125 
 
 end
 

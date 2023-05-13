@@ -36,7 +36,7 @@ function CustomerDialouge:init(Myindex)
     --print("flavor: "..flavor)
     
 
-    local text = "I hate the "..flavor.."."
+    local text = "I hate "..flavor.."."
     
           
     if Whom == 2 then
@@ -108,13 +108,13 @@ function CustomerDialouge:init(Myindex)
     
     self:setImage(gameOverImage)
     if Myindex == 1 then
-        self:moveTo(210+self.width/2, 112)
+        self:moveTo(190+self.width/2, 112)
     end
     if Myindex == 2 then
-        self:moveTo(210+self.width/2, 132)
+        self:moveTo(190+self.width/2, 132)
     end
     if Myindex == 3 then
-        self:moveTo(210+self.width/2, 152)
+        self:moveTo(190+self.width/2, 152)
     end
     
     self:setZIndex(151)
