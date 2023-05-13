@@ -11,7 +11,7 @@ function GameOverScene:init(text)
     
     print("DrinksCorrect:" ..DrinksCorrect)
     local text = "Broken"
-    if DrinksCorrect == 6 then
+    if DrinksCorrect == 4 then
         text = "Congrats!  You made Everyone a perfect drink.  It took you "..Days.."days."
     else
         text = "Day "..Days..". You made ".. DrinksCorrect .. " perfect drinks."
@@ -31,7 +31,7 @@ end
 
 function GameOverScene:update()
     if pd.buttonJustPressed(pd.kButtonA) then
-        if DrinksCorrect > 3 then
+        if DrinksCorrect == 4 then
             SCENE_MANAGER:switchScene(StartScene)
         else
             DrinksCorrect = 0

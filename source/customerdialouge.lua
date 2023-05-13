@@ -15,21 +15,8 @@ function CustomerDialouge:init(Myindex)
 	CustomerDialouge.super.init(self)
     local text = "Gross"
     
-    
-    if Whom == 1 then
-        print("State SamanthaFavorites")
-        for i = 1,3 do 
-            if SamanthaFavorites[i] == SelectionArray[Myindex] then
-                text = "Good"
-            end        
-        end
-        
-        if SamanthaFavorites[Myindex] == SelectionArray[Myindex] then
-            text = "Perfect"
-        
-        end
-        
-    elseif Whom == 2 then
+          
+    if Whom == 2 then
         print("State AnnaFavorites")
         for i = 1,3 do 
             if AnnaFavorites[i] == SelectionArray[Myindex] then
@@ -44,7 +31,7 @@ function CustomerDialouge:init(Myindex)
         
         
         
-    elseif Whom == 3 then
+    elseif Whom == 1 then
         print("State AbigailFavorites")
         for i = 1,3 do 
             if AbigailFavorites[i] == SelectionArray[Myindex] then
@@ -70,7 +57,7 @@ function CustomerDialouge:init(Myindex)
         
         end
        
-    elseif Whom == 5 then
+    elseif Whom == 3 then
         print("State JaiceFavorites")
         for i = 1,3 do 
             if JaiceFavorites[i] == SelectionArray[Myindex] then
@@ -82,20 +69,7 @@ function CustomerDialouge:init(Myindex)
             text = "Perfect"
         
         end
-       
-    elseif Whom == 6 then
-        print("State VincentFavorites")
-        for i = 1,3 do 
-            if VincentFavorites[i] == SelectionArray[Myindex] then
-                text = "Good"
-            end        
-        end
-        
-        if VincentFavorites[Myindex] == SelectionArray[Myindex] then
-            text = "Perfect"
-        
-        end
-       
+    
     end
     
     
@@ -107,13 +81,13 @@ function CustomerDialouge:init(Myindex)
     
     self:setImage(gameOverImage)
     if Myindex == 1 then
-        self:moveTo(300, 20)
+        self:moveTo(200-(self.width)/2, 40)
     end
     if Myindex == 2 then
-        self:moveTo(300, 40)
+        self:moveTo(200-(self.width)/2, 60)
     end
     if Myindex == 3 then
-        self:moveTo(300, 60)
+        self:moveTo(200-(self.width)/2, 80)
     end
     
     self:setZIndex(151)

@@ -17,7 +17,7 @@ function Customer:init(place)
     self.name = place
 
     if place == 1 then
-        CustomerText("Samantha")
+        CustomerText("Abigail")
         local Dudeimage = gfx.image.new("images/Dude")
         self:setImage(Dudeimage)
     elseif place == 2 then
@@ -25,24 +25,14 @@ function Customer:init(place)
         local Dudeimage = gfx.image.new("images/Dude")
         self:setImage(Dudeimage)
     elseif place == 3 then
-        CustomerText("Abigail")
+        CustomerText("Jaice")
         local Dudeimage = gfx.image.new("images/Dude")
-        self:setImage(Dudeimage)
+        self:setImage(Dudeimage)        
     elseif place == 4 then
         CustomerText("Gavin")
         local Dudeimage = gfx.image.new("images/Dude")
         self:setImage(Dudeimage)
-        
-    elseif place == 5 then
-        CustomerText("Jaice")
-        local Dudeimage = gfx.image.new("images/Dude")
-        self:setImage(Dudeimage)
-        
-    elseif place == 6 then
-        CustomerText("Vincent")
-        local Dudeimage = gfx.image.new("images/Dude")
-        self:setImage(Dudeimage)
-        
+     
     else
         CustomerText("Broken")
         local Dudeimage = gfx.image.new("images/Dude")
@@ -51,7 +41,7 @@ function Customer:init(place)
     
     
     
-    self:moveTo(142,64)
+    self:moveTo(300,64)
     
     self:setZIndex(100)
     self:add()

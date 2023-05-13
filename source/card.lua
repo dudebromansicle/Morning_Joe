@@ -39,17 +39,23 @@ function Card:update()
     
     if SelectionArray[1] == self.spot then
         self.MyX = 130
-        self.MyY = 130 
+        self.MyY = 150 
+        
+    self:setZIndex(200)
     elseif SelectionArray[2] == self.spot then
         self.MyX = 180
-        self.MyY = 130 
+        self.MyY = 150 
+        
+    self:setZIndex(200)
     elseif SelectionArray[3] == self.spot then
         self.MyX = 230
-        self.MyY = 130 
+        self.MyY = 150 
+        
+    self:setZIndex(200)
     else
         if self.spot == currentingrident then
             self.MyX = 23+(50*(self.spot-1))
-            self.MyY = 180 
+            self.MyY = 190 
         else
             self.MyX = 23+(50*(self.spot-1))
             self.MyY = 200 

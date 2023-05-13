@@ -4,7 +4,9 @@ import "drinkBar"
 
 import "startScene"
 
+import "answercover"
 import "customer"
+import "customerfavorites"
 
 import "customerdialouge"
 
@@ -26,6 +28,7 @@ function GameScene:init()
 	GameScene.super.init(self)
     currentingrident = 1
     SelectionArray = {0}
+    AnswerCover()
     
 
     self:add()
@@ -36,12 +39,22 @@ function GameScene:init()
     
     IngridentText(currentingrident)
     DrinkBar()
+    print("CustomerOrder[#CustomerOrder]")
+    print(CustomerOrder[#CustomerOrder])
     Whom = CustomerOrder[#CustomerOrder]
     Customer(CustomerOrder[#CustomerOrder])
 
     table.remove(CustomerOrder, #CustomerOrder)
     
+    CreateFavorites(Whom)
+    ThisisCorrect = false
 
+end
+
+function CreateFavorites(CustomerID) 
+    for i = 1,3 do 
+        CustomerFavorites(CustomerID,i) 
+    end
 end
 
 function CreateDecks(Max) 
@@ -49,7 +62,6 @@ function CreateDecks(Max)
         Card(i) 
     end
 end
-
 
 function Ingrident(NewValue) 
     currentingrident = currentingrident + NewValue
@@ -79,9 +91,9 @@ function Ingrident(NewValue)
 end
 
 
-function SelectThis() 
+-- function SelectThis() 
         
-end
+-- end
 
 
 function GameScene:update()
@@ -95,40 +107,62 @@ function GameScene:update()
         Ingrident(-1)
     end
     --add drink made
+
+    if Nomoreinput == true then
+        if Whom == 1 then
+            if AbigailFavorites[1] == SelectionArray[1] and AbigailFavorites[2] == SelectionArray[2] and AbigailFavorites[3] == SelectionArray[3] then
+                
+                ThisisCorrect = true
+            end
+        elseif Whom == 2 then
+        
+            if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
+                
+                ThisisCorrect = true
+            end
+        elseif Whom == 3 then
+            if JaiceFavorites[1] == SelectionArray[1] and JaiceFavorites[2] == SelectionArray[2] and JaiceFavorites[3] == SelectionArray[3] then
+                
+                ThisisCorrect = true
+            end
+            
+        elseif Whom == 4 then
+        
+            if GavinFavorites[1] == SelectionArray[1] and GavinFavorites[2] == SelectionArray[2] and GavinFavorites[3] == SelectionArray[3] then
+                
+                ThisisCorrect = true
+            end
+        
+        end
+    end
     if pd.buttonJustPressed(pd.kButtonA) and Nomoreinput == true then
        
         self.drinkmade = true 
         crankinstruction = false
         
         if Whom == 1 then
-            print("Check SamanthaFavorites")
-            if SamanthaFavorites[1] == SelectionArray[1] and SamanthaFavorites[2] == SelectionArray[2] and SamanthaFavorites[3] == SelectionArray[3] then
+            print("Check AbigailFavorites")
+            if AbigailFavorites[1] == SelectionArray[1] and AbigailFavorites[2] == SelectionArray[2] and AbigailFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
+                ThisisCorrect = true
             end
         elseif Whom == 2 then
             print("Check AnnaFavorites")
             if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
+                ThisisCorrect = true
             end
         elseif Whom == 3 then
-            print("Check AbigailFavorites")
-            if AbigailFavorites[1] == SelectionArray[1] and AbigailFavorites[2] == SelectionArray[2] and AbigailFavorites[3] == SelectionArray[3] then
+            print("Check JaiceFavorites")
+            if JaiceFavorites[1] == SelectionArray[1] and JaiceFavorites[2] == SelectionArray[2] and JaiceFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
+                ThisisCorrect = true
             end
         elseif Whom == 4 then
             print("Check GavinFavorites")
             if GavinFavorites[1] == SelectionArray[1] and GavinFavorites[2] == SelectionArray[2] and GavinFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
-            end
-        elseif Whom == 5 then
-            print("Check JaiceFavorites")
-            if JaiceFavorites[1] == SelectionArray[1] and JaiceFavorites[2] == SelectionArray[2] and JaiceFavorites[3] == SelectionArray[3] then
-                DrinksCorrect = DrinksCorrect + 1
-            end
-        elseif Whom == 6 then
-            print("Check VincentFavorites")
-            if VincentFavorites[1] == SelectionArray[1] and VincentFavorites[2] == SelectionArray[2] and VincentFavorites[3] == SelectionArray[3] then
-                DrinksCorrect = DrinksCorrect + 1
+                ThisisCorrect = true
             end
         end
         -- if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
@@ -160,7 +194,7 @@ function GameScene:update()
     
     
     
-    if pd.buttonJustPressed(pd.kButtonB) and self.currentpick > 1 and Nomoreinput == false then
+    if pd.buttonJustPressed(pd.kButtonB) and self.currentpick > 0 and Nomoreinput == false then
         self.currentpick = self.currentpick - 1
 
         table.remove(SelectionArray,self.currentpick)

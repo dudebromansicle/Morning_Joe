@@ -14,10 +14,10 @@ function DrinkBar:init()
 
     self:moveTo(100+DrinkBarsLength/2, 100)
     
-    local RectImage = gfx.image.new(DrinkBarsLength, 8)
+    local RectImage = gfx.image.new(DrinkBarsLength, 6)
     gfx.pushContext(RectImage)
         gfx.setColor(gfx.kColorBlack)
-        gfx.fillRect(0, 0, DrinkBarsLength, 8)
+        gfx.fillRect(0, 0, DrinkBarsLength, 6)
     gfx.popContext()
     self:setImage(RectImage)
     self:add()
@@ -35,14 +35,23 @@ end
 function DrinkBar:update()
     
    
-    local RectImage = gfx.image.new(DrinkBarsLength, 8)
+    local RectImage = gfx.image.new(DrinkBarsLength, 6)
     gfx.pushContext(RectImage)
         gfx.setColor(gfx.kColorBlack)
-        gfx.fillRect(0, 0, DrinkBarsLength, 8)
+        gfx.fillRect(0, 0, DrinkBarsLength, 6)
     gfx.popContext()
     self:setImage(RectImage)
 
-    self:moveTo(100+DrinkBarsLength/2, 150)
+    if DrinkBarsLength > 159 then
+        DrinkBarsLength = 160
+        TasteDrink()
+    end
+    if DrinkBarsLength==1 then
+        self:moveTo(500, 500)
+    else
+        self:moveTo(100+DrinkBarsLength/2, 130)
+    end
+
     if DrinkBarsLength > 159 then
         DrinkBarsLength = 160
         TasteDrink()

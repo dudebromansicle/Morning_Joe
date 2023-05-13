@@ -28,24 +28,7 @@ end
 
 function RandomizeFavorites()
     --Woman
-    local a = 100
-    local b = 100
-    local c = 100
-    a = math.random(1,8)
-    b = math.random(1,8)
-    while b == a do
-        b = math.random(1,8)
-    end
-    c = math.random(1,8)
-    while c == a or c == b do
-        c = math.random(1,8)
-    end
-    SamanthaFavorites = {a, b, c}
-    
-    for i = 1,#SamanthaFavorites do 
-        print("SamanthaFavorites:"..SamanthaFavorites[i])
-    end
-    
+        
     local a = 100
     local b = 100
     local c = 100
@@ -119,23 +102,6 @@ function RandomizeFavorites()
         print("JaiceFavorites:"..JaiceFavorites[i])
     end
     
-    local a = 100
-    local b = 100
-    local c = 100
-    a = math.random(1,8)
-    b = math.random(1,8)
-    while b == a do
-        b = math.random(1,8)
-    end
-    c = math.random(1,8)
-    while c == a or c == b do
-        c = math.random(1,8)
-    end
-    VincentFavorites = {a, b, c}
-    
-    for i = 1,#VincentFavorites do 
-        print("VincentFavorites:"..VincentFavorites[i])
-    end
 end
 function RandomizeOrder()
     
@@ -143,8 +109,6 @@ function RandomizeOrder()
     local b = 100
     local c = 100
     local d = 100
-    local e = 100
-    local f = 100
     a = math.random(1,6)
 
     b = math.random(1,6)
@@ -162,17 +126,8 @@ function RandomizeOrder()
         d = math.random(1,6)
     end
 
-    e = math.random(1,6)
-    while e == a or e == b  or e == c  or e == d do
-        e = math.random(1,6)
-    end
     
-    f = math.random(1,6)
-    while f == a or f == b  or f == c  or f == d or f == e do
-        f = math.random(1,6)
-    end
-    
-    CustomerOrder = {a,b,c,d,e,f}
+    CustomerOrder = {a,b,c,d}
 
     
     for i = 1,#CustomerOrder do 
