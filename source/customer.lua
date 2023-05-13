@@ -41,9 +41,9 @@ function Customer:init(place)
     
     
     
-    self:moveTo(300,64)
+    self:moveTo(320,64)
     
-    self:setZIndex(100)
+    self:setZIndex(9)
     self:add()
     
 

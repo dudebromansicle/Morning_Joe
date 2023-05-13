@@ -29,13 +29,7 @@ function IngridentText:init(ingridentnumber)
         text = "Pistachio"
     elseif ingridentnumber == 6 then 
         
-        text = "Lavender"
-    elseif ingridentnumber == 7 then 
-        
         text = "Cinnamon"
-    elseif ingridentnumber == 8 then 
-        
-        text = "Caramel"
     end
     
    local gameOverImage = gfx.image.new(gfx.getTextSize(text))

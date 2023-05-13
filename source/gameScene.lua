@@ -9,8 +9,10 @@ import "customer"
 import "customerfavorites"
 
 import "customerdialouge"
+import "bigCard"
 
 
+import "table"
 import "hello"
 import "ingridenttext"
 
@@ -24,6 +26,7 @@ class('GameScene').extends(gfx.sprite)
 function GameScene:init()
     CustomerNumber = CustomerNumber+1
     HelloText()
+    Table()
 
     
 
@@ -39,7 +42,7 @@ function GameScene:init()
     self:add()
     self.currentpick = 1
     self.drinkmade = false
-    MyMax = 8
+    MyMax = 6
     CreateDecks(MyMax)
     
     for i = 1,#Solvedlist do 
@@ -199,6 +202,8 @@ function GameScene:update()
     if pd.buttonJustPressed(pd.kButtonA) and self.currentpick < 4 then
         --SCENE_MANAGER:switchScene(GameOverScene)
         SelectionArray[self.currentpick] = currentingrident
+        
+        BigCard(#SelectionArray+1, currentingrident)
         
         for i = 1,#SelectionArray do 
             print("SelectionArray:"..SelectionArray[i])

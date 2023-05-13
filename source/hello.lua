@@ -21,7 +21,7 @@ function HelloText:init(CustomerName)
     
     self:setImage(gameOverImage)
     
-    self:moveTo(50+self.width/2, 80)
+    self:moveTo(250+self.width/2, 130)
     
     self:setZIndex(151)
 
