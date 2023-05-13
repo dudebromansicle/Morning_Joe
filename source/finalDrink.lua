@@ -12,7 +12,7 @@ class('FinalDrink').extends(gfx.sprite)
 function FinalDrink:init()
     
     FinalDrink.super.init(self)
-    --SmokeScreen()
+    SmokeScreen()
 
     local Dudeimage = gfx.image.new("images/TEMP_Mug")
     self:setImage(Dudeimage)

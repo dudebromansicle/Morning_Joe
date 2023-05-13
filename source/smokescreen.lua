@@ -1,42 +1,44 @@
--- import "gameScene"
--- import "critterselector"
+import "CoreLibs/animation"
 
--- import "CoreLibs/sprites"
+import "CoreLibs/animator"
 
--- import "CoreLibs/animation"
+local pd <const> = playdate
+local gfx <const> = playdate.graphics
 
--- import "CoreLibs/animator"
-
--- local pd <const> = playdate
--- local gfx <const> = playdate.graphics
-
--- class('SmokeScreen').extends(gfx.sprite)
+class('SmokeScreen').extends(gfx.sprite)
 
 
--- function SmokeScreen:init()
---     SmokeScreen.super.init(self)
+function SmokeScreen:init()
+    SmokeScreen.super.init(self)
     
---     --local string = "images/Puff-table-64-64"
---     self.imagetable = playdate.graphics.imagetable.new(string)
+    local string = "images/Puff-table-64-64"
+    self.imagetable = playdate.graphics.imagetable.new(string)
 
---     self.animation = gfx.animation.loop.new(150, self.imagetable, true)
+    self.animation = gfx.animation.loop.new(80, self.imagetable, true)
 
---     self:moveTo(94,110)
+    self:moveTo(94,110)
     
---     self.myAnimator = gfx.animator.new(200, 0, 240)
---     self:setZIndex(900)
---     self:add()
+    self.myAnimator = gfx.animator.new(300, 0, 240)
+    self:setZIndex(900)
+    self:add()
+    
+    self.MyX = 136
 
--- end
+    self.MyY = 130 
 
--- function SmokeScreen:update()
+end
+
+function SmokeScreen:update()
      
---     if self.myAnimator:ended() then
+    self:moveTo(self.x+(self.MyX-self.x)/2,self.y+(self.MyY-self.y)/2)
+
+    self:setImage(self.animation:image())
+     if self.myAnimator:ended() then
       
---         self:remove()
+         self:remove()
     
---     end
+     end
 
 
 
--- end
+end
