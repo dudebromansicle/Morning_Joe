@@ -11,6 +11,7 @@ import "customerfavorites"
 import "customerdialouge"
 
 
+import "hello"
 import "ingridenttext"
 
 import "CoreLibs/crank"
@@ -22,7 +23,7 @@ class('GameScene').extends(gfx.sprite)
 
 function GameScene:init()
     CustomerNumber = CustomerNumber+1
-    
+    HelloText()
 
     
 
