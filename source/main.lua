@@ -13,6 +13,7 @@ import "gameScene"
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
+
 playdate.ui.crankIndicator:start()
 SCENE_MANAGER = SceneManager()
 

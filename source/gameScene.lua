@@ -194,7 +194,7 @@ function GameScene:update()
     
     
     
-    if pd.buttonJustPressed(pd.kButtonB) and self.currentpick > 0 and Nomoreinput == false then
+    if pd.buttonJustPressed(pd.kButtonB) and self.currentpick > 1 and Nomoreinput == false then
         self.currentpick = self.currentpick - 1
 
         table.remove(SelectionArray,self.currentpick)

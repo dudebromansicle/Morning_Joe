@@ -7,7 +7,10 @@ local gfx <const> = playdate.graphics
 class('StartScene').extends(gfx.sprite)
 
 function StartScene:init()
-	Days = 0
+	
+    
+    
+    Days = 0
     CustomerNumber = 0
     DrinksCorrect = 0
     CustomerOrder = {1,2,3,4,5,6}
@@ -109,21 +112,21 @@ function RandomizeOrder()
     local b = 100
     local c = 100
     local d = 100
-    a = math.random(1,6)
+    a = math.random(1,4)
 
-    b = math.random(1,6)
+    b = math.random(1,4)
     while b == a do
-        b = math.random(1,6)
+        b = math.random(1,4)
     end
 
-    c = math.random(1,6)
+    c = math.random(1,4)
     while c == a or c == b do
-        c = math.random(1,6)
+        c = math.random(1,4)
     end
     
-    d = math.random(1,6)
+    d = math.random(1,4)
     while d == a or d == b  or d == c do
-        d = math.random(1,6)
+        d = math.random(1,4)
     end
 
     
