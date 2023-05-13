@@ -1,13 +1,17 @@
 import "gamescene"
 import "startscene"
 
+import "customer"
+
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
 class('CustomerDialouge').extends(gfx.sprite)
 
 function CustomerDialouge:init(Myindex)
-   Nomoreinput = true
+    
+   
+    Nomoreinput = true
 	CustomerDialouge.super.init(self)
     local text = "Gross"
     
@@ -21,12 +25,9 @@ function CustomerDialouge:init(Myindex)
     
     if SteveFavorites[Myindex] == SelectionArray[Myindex] then
         text = "Perfect"
-        NumberCorrect = NumberCorrect + 1
     
     end
-    if NumberCorrect == 3 and Myindex == 3 then
-        DrinksCorrect = DrinksCorrect + 1
-    end
+    
     
    local gameOverImage = gfx.image.new(gfx.getTextSize(text))
     gfx.pushContext(gameOverImage)

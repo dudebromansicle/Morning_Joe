@@ -11,6 +11,7 @@ local gfx <const> = playdate.graphics
 class('Customer').extends(gfx.sprite)
 
 function Customer:init(place)
+    
     Customer.super.init(self)
 
     
@@ -25,10 +26,11 @@ function Customer:init(place)
     CustomerText("Steve")
 
 
+
 end
 
 function TasteDrink() 
-    print("TasteDrink")
+    --print("TasteDrink")
     CustomerDialouge(1)
     CustomerDialouge(2)
     CustomerDialouge(3)

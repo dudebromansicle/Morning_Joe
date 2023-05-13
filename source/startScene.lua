@@ -7,7 +7,8 @@ local gfx <const> = playdate.graphics
 class('StartScene').extends(gfx.sprite)
 
 function StartScene:init()
-	DrinksCorrect = 0
+	CustomerNumber = 0
+    DrinksCorrect = 0
     local text = "This Will be the Start Screen"
     local gameOverImage = gfx.image.new(gfx.getTextSize(text))
     gfx.pushContext(gameOverImage)
@@ -22,6 +23,24 @@ function StartScene:init()
 end
 
 function RandomizeFavorites()
+    --Woman
+    local a = 100
+    local b = 100
+    local c = 100
+    a = math.random(1,8)
+    b = math.random(1,8)
+    while b == a do
+        b = math.random(1,8)
+    end
+    c = math.random(1,8)
+    while c == a or c == b do
+        c = math.random(1,8)
+    end
+    SamanthaFavorites = {a, b, c}
+    
+    for i = 1,#SamanthaFavorites do 
+        print("SamanthaFavorites:"..SamanthaFavorites[i])
+    end
     
     local a = 100
     local b = 100
@@ -35,10 +54,83 @@ function RandomizeFavorites()
     while c == a or c == b do
         c = math.random(1,8)
     end
-    SteveFavorites = {a, b, c}
+    AnnaFavorites = {a, b, c}
     
-    for i = 1,#SteveFavorites do 
-        print("SteveFavorites:"..SteveFavorites[i])
+    for i = 1,#AnnaFavorites do 
+        print("AnnaFavorites:"..AnnaFavorites[i])
+    end
+    
+    local a = 100
+    local b = 100
+    local c = 100
+    a = math.random(1,8)
+    b = math.random(1,8)
+    while b == a do
+        b = math.random(1,8)
+    end
+    c = math.random(1,8)
+    while c == a or c == b do
+        c = math.random(1,8)
+    end
+    AbigailFavorites = {a, b, c}
+    
+    for i = 1,#AbigailFavorites do 
+        print("AbigailFavorites:"..AbigailFavorites[i])
+    end
+    --Men
+    
+    local a = 100
+    local b = 100
+    local c = 100
+    a = math.random(1,8)
+    b = math.random(1,8)
+    while b == a do
+        b = math.random(1,8)
+    end
+    c = math.random(1,8)
+    while c == a or c == b do
+        c = math.random(1,8)
+    end
+    GavinFavorites = {a, b, c}
+    
+    for i = 1,#GavinFavorites do 
+        print("GavinFavorites:"..GavinFavorites[i])
+    end
+    
+    local a = 100
+    local b = 100
+    local c = 100
+    a = math.random(1,8)
+    b = math.random(1,8)
+    while b == a do
+        b = math.random(1,8)
+    end
+    c = math.random(1,8)
+    while c == a or c == b do
+        c = math.random(1,8)
+    end
+    JaiceFavorites = {a, b, c}
+    
+    for i = 1,#JaiceFavorites do 
+        print("JaiceFavorites:"..JaiceFavorites[i])
+    end
+    
+    local a = 100
+    local b = 100
+    local c = 100
+    a = math.random(1,8)
+    b = math.random(1,8)
+    while b == a do
+        b = math.random(1,8)
+    end
+    c = math.random(1,8)
+    while c == a or c == b do
+        c = math.random(1,8)
+    end
+    VincentFavorites = {a, b, c}
+    
+    for i = 1,#VincentFavorites do 
+        print("VincentFavorites:"..VincentFavorites[i])
     end
 end
 

@@ -27,6 +27,9 @@ end
 
 function DrinkBarIncrease(Addition)
     DrinkBarsLength = DrinkBarsLength + Addition
+    if DrinkBarsLength < 1 then
+        DrinkBarsLength = 1
+    end
 end
 
 function DrinkBar:update()

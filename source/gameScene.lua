@@ -2,7 +2,11 @@ import "gameOverScene"
 import "card"
 import "drinkBar"
 
+import "startScene"
+
 import "customer"
+
+import "customerdialouge"
 
 
 import "ingridenttext"
@@ -15,6 +19,7 @@ local gfx <const> = playdate.graphics
 class('GameScene').extends(gfx.sprite)
 
 function GameScene:init()
+    CustomerNumber = CustomerNumber+1
     NumberCorrect = 0
     Nomoreinput = false
     crankinstruction = false
@@ -31,6 +36,7 @@ function GameScene:init()
     IngridentText(currentingrident)
     DrinkBar()
     Customer()
+    
 
 end
 
@@ -80,7 +86,16 @@ function GameScene:update()
        
         self.drinkmade = true 
         crankinstruction = false
-        SCENE_MANAGER:switchScene(GameOverScene)
+        if SteveFavorites[1] == SelectionArray[1] and SteveFavorites[2] == SelectionArray[2] and SteveFavorites[3] == SelectionArray[3] then
+            DrinksCorrect = DrinksCorrect + 1
+        end
+        print("DrinksCorrect:" ..DrinksCorrect)
+        if CustomerNumber == 4 then
+            SCENE_MANAGER:switchScene(GameOverScene)
+        else
+            SCENE_MANAGER:switchScene(GameScene)
+        end
+       
     end
 
     if pd.buttonJustPressed(pd.kButtonA) and self.currentpick < 4 then

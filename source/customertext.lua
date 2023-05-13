@@ -1,5 +1,6 @@
 import "gamescene"
 
+
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
@@ -11,6 +12,7 @@ function CustomerText:init(CustomerName)
     
     
     
+    NumberCorrect = 0
     
    local gameOverImage = gfx.image.new(gfx.getTextSize(CustomerName))
     gfx.pushContext(gameOverImage)
