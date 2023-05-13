@@ -16,16 +16,86 @@ function CustomerDialouge:init(Myindex)
     local text = "Gross"
     
     
-    
-    for i = 1,3 do 
-        if AnnaFavorites[i] == SelectionArray[Myindex] then
-            text = "Good"
-        end        
-    end
-    
-    if AnnaFavorites[Myindex] == SelectionArray[Myindex] then
-        text = "Perfect"
-    
+    if Whom == 1 then
+        print("State SamanthaFavorites")
+        for i = 1,3 do 
+            if SamanthaFavorites[i] == SelectionArray[Myindex] then
+                text = "Good"
+            end        
+        end
+        
+        if SamanthaFavorites[Myindex] == SelectionArray[Myindex] then
+            text = "Perfect"
+        
+        end
+        
+    elseif Whom == 2 then
+        print("State AnnaFavorites")
+        for i = 1,3 do 
+            if AnnaFavorites[i] == SelectionArray[Myindex] then
+                text = "Good"
+            end        
+        end
+        
+        if AnnaFavorites[Myindex] == SelectionArray[Myindex] then
+            text = "Perfect"
+        
+        end
+        
+        
+        
+    elseif Whom == 3 then
+        print("State AbigailFavorites")
+        for i = 1,3 do 
+            if AbigailFavorites[i] == SelectionArray[Myindex] then
+                text = "Good"
+            end        
+        end
+        
+        if AbigailFavorites[Myindex] == SelectionArray[Myindex] then
+            text = "Perfect"
+        
+        end
+        
+    elseif Whom == 4 then
+        print("State GavinFavorites")
+        for i = 1,3 do 
+            if GavinFavorites[i] == SelectionArray[Myindex] then
+                text = "Good"
+            end        
+        end
+        
+        if GavinFavorites[Myindex] == SelectionArray[Myindex] then
+            text = "Perfect"
+        
+        end
+       
+    elseif Whom == 5 then
+        print("State JaiceFavorites")
+        for i = 1,3 do 
+            if JaiceFavorites[i] == SelectionArray[Myindex] then
+                text = "Good"
+            end        
+        end
+        
+        if JaiceFavorites[Myindex] == SelectionArray[Myindex] then
+            text = "Perfect"
+        
+        end
+       
+    elseif Whom == 6 then
+        print("State VincentFavorites")
+        for i = 1,3 do 
+            if VincentFavorites[i] == SelectionArray[Myindex] then
+                text = "Good"
+            end        
+        end
+        
+        if VincentFavorites[Myindex] == SelectionArray[Myindex] then
+            text = "Perfect"
+        
+        end
+       
     end
     
     

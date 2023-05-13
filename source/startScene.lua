@@ -7,7 +7,8 @@ local gfx <const> = playdate.graphics
 class('StartScene').extends(gfx.sprite)
 
 function StartScene:init()
-	CustomerNumber = 0
+	Days = 0
+    CustomerNumber = 0
     DrinksCorrect = 0
     CustomerOrder = {1,2,3,4,5,6}
     local text = "This Will be the Start Screen"

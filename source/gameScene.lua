@@ -26,6 +26,7 @@ function GameScene:init()
 	GameScene.super.init(self)
     currentingrident = 1
     SelectionArray = {0}
+    
 
     self:add()
     self.currentpick = 1
@@ -35,7 +36,7 @@ function GameScene:init()
     
     IngridentText(currentingrident)
     DrinkBar()
-
+    Whom = CustomerOrder[#CustomerOrder]
     Customer(CustomerOrder[#CustomerOrder])
 
     table.remove(CustomerOrder, #CustomerOrder)
@@ -52,15 +53,23 @@ end
 
 function Ingrident(NewValue) 
     currentingrident = currentingrident + NewValue
-    while currentingrident == SelectionArray[1] or currentingrident == SelectionArray[2] or currentingrident == SelectionArray[3] do
-        currentingrident = currentingrident + NewValue
-    end 
-
+    
     if currentingrident > MyMax then
         currentingrident = 1
     elseif currentingrident < 1 then
         currentingrident = MyMax
     end
+
+    while currentingrident == SelectionArray[1] or currentingrident == SelectionArray[2] or currentingrident == SelectionArray[3] do
+        currentingrident = currentingrident + NewValue
+        
+        if currentingrident > MyMax then
+            currentingrident = 1
+        elseif currentingrident < 1 then
+            currentingrident = MyMax
+        end
+    end 
+
     print("Ingrident:"..currentingrident)
     if #SelectionArray < 3 then
         
@@ -73,6 +82,7 @@ end
 function SelectThis() 
         
 end
+
 
 function GameScene:update()
 
@@ -89,9 +99,43 @@ function GameScene:update()
        
         self.drinkmade = true 
         crankinstruction = false
-        if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
-            DrinksCorrect = DrinksCorrect + 1
+        
+        if Whom == 1 then
+            print("Check SamanthaFavorites")
+            if SamanthaFavorites[1] == SelectionArray[1] and SamanthaFavorites[2] == SelectionArray[2] and SamanthaFavorites[3] == SelectionArray[3] then
+                DrinksCorrect = DrinksCorrect + 1
+            end
+        elseif Whom == 2 then
+            print("Check AnnaFavorites")
+            if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
+                DrinksCorrect = DrinksCorrect + 1
+            end
+        elseif Whom == 3 then
+            print("Check AbigailFavorites")
+            if AbigailFavorites[1] == SelectionArray[1] and AbigailFavorites[2] == SelectionArray[2] and AbigailFavorites[3] == SelectionArray[3] then
+                DrinksCorrect = DrinksCorrect + 1
+            end
+        elseif Whom == 4 then
+            print("Check GavinFavorites")
+            if GavinFavorites[1] == SelectionArray[1] and GavinFavorites[2] == SelectionArray[2] and GavinFavorites[3] == SelectionArray[3] then
+                DrinksCorrect = DrinksCorrect + 1
+            end
+        elseif Whom == 5 then
+            print("Check JaiceFavorites")
+            if JaiceFavorites[1] == SelectionArray[1] and JaiceFavorites[2] == SelectionArray[2] and JaiceFavorites[3] == SelectionArray[3] then
+                DrinksCorrect = DrinksCorrect + 1
+            end
+        elseif Whom == 6 then
+            print("Check VincentFavorites")
+            if VincentFavorites[1] == SelectionArray[1] and VincentFavorites[2] == SelectionArray[2] and VincentFavorites[3] == SelectionArray[3] then
+                DrinksCorrect = DrinksCorrect + 1
+            end
         end
+        -- if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
+        --     DrinksCorrect = DrinksCorrect + 1
+        -- end
+
+
         print("DrinksCorrect:" ..DrinksCorrect)
         if CustomerNumber == 4 then
             SCENE_MANAGER:switchScene(GameOverScene)

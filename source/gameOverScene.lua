@@ -6,10 +6,17 @@ local gfx <const> = playdate.graphics
 class('GameOverScene').extends(gfx.sprite)
 
 function GameOverScene:init(text)
+    Days = Days+1
     CustomerNumber = 0
     
     print("DrinksCorrect:" ..DrinksCorrect)
-    local text = "You made ".. DrinksCorrect .. " perfect drinks."
+    local text = "Broken"
+    if DrinksCorrect == 6 then
+        text = "Congrats!  You made Everyone a perfect drink.  It took you "..Days.."days."
+    else
+        text = "Day "..Days..". You made ".. DrinksCorrect .. " perfect drinks."
+    end
+    
     local gameOverImage = gfx.image.new(gfx.getTextSize(text))
     gfx.pushContext(gameOverImage)
         gfx.drawText(text, 0, 0)
