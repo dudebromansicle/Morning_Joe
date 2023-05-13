@@ -2,6 +2,7 @@ import "gamescene"
 import "startscene"
 
 import "customer"
+import "wordbubble"
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
@@ -15,6 +16,7 @@ function CustomerDialouge:init(Myindex)
 	CustomerDialouge.super.init(self)
     local flavor = "broken"
 
+    WordBubble(false)
 
     if SelectionArray[Myindex] == 1 then
         flavor = "Chocolate"
@@ -106,13 +108,13 @@ function CustomerDialouge:init(Myindex)
     
     self:setImage(gameOverImage)
     if Myindex == 1 then
-        self:moveTo(200+self.width/2, 112)
+        self:moveTo(210+self.width/2, 112)
     end
     if Myindex == 2 then
-        self:moveTo(200+self.width/2, 132)
+        self:moveTo(210+self.width/2, 132)
     end
     if Myindex == 3 then
-        self:moveTo(200+self.width/2, 152)
+        self:moveTo(210+self.width/2, 152)
     end
     
     self:setZIndex(151)

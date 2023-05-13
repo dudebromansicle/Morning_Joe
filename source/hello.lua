@@ -1,5 +1,5 @@
 import "gamescene"
-
+import "wordbubble"
 import "CoreLibs/timer"
 
 local pd <const> = playdate
@@ -27,6 +27,7 @@ function HelloText:init(CustomerName)
 
     self:add()
     self.destruction = pd.timer.new(2000)
+    WordBubble(true)
 
 
 end
