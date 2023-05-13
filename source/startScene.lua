@@ -9,6 +9,7 @@ class('StartScene').extends(gfx.sprite)
 function StartScene:init()
 	CustomerNumber = 0
     DrinksCorrect = 0
+    CustomerOrder = {1,2,3,4,5,6}
     local text = "This Will be the Start Screen"
     local gameOverImage = gfx.image.new(gfx.getTextSize(text))
     gfx.pushContext(gameOverImage)
@@ -20,6 +21,8 @@ function StartScene:init()
 
     self:add()
     RandomizeFavorites()
+    
+    RandomizeOrder()
 end
 
 function RandomizeFavorites()
@@ -131,6 +134,48 @@ function RandomizeFavorites()
     
     for i = 1,#VincentFavorites do 
         print("VincentFavorites:"..VincentFavorites[i])
+    end
+end
+function RandomizeOrder()
+    
+    local a = 100
+    local b = 100
+    local c = 100
+    local d = 100
+    local e = 100
+    local f = 100
+    a = math.random(1,6)
+
+    b = math.random(1,6)
+    while b == a do
+        b = math.random(1,6)
+    end
+
+    c = math.random(1,6)
+    while c == a or c == b do
+        c = math.random(1,6)
+    end
+    
+    d = math.random(1,6)
+    while d == a or d == b  or d == c do
+        d = math.random(1,6)
+    end
+
+    e = math.random(1,6)
+    while e == a or e == b  or e == c  or e == d do
+        e = math.random(1,6)
+    end
+    
+    f = math.random(1,6)
+    while f == a or f == b  or f == c  or f == d or f == e do
+        f = math.random(1,6)
+    end
+    
+    CustomerOrder = {a,b,c,d,e,f}
+
+    
+    for i = 1,#CustomerOrder do 
+        print(i, "CustomerOrder:"..CustomerOrder[i])
     end
 end
 

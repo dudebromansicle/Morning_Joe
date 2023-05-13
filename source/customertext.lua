@@ -22,7 +22,7 @@ function CustomerText:init(CustomerName)
     
     self:setImage(gameOverImage)
     
-    self:moveTo(30, 20)
+    self:moveTo(10+(self.width)/2, 20)
     
     self:setZIndex(151)
 

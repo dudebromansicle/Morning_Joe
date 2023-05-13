@@ -18,12 +18,12 @@ function CustomerDialouge:init(Myindex)
     
     
     for i = 1,3 do 
-        if SteveFavorites[i] == SelectionArray[Myindex] then
+        if AnnaFavorites[i] == SelectionArray[Myindex] then
             text = "Good"
         end        
     end
     
-    if SteveFavorites[Myindex] == SelectionArray[Myindex] then
+    if AnnaFavorites[Myindex] == SelectionArray[Myindex] then
         text = "Perfect"
     
     end

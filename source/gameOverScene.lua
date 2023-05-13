@@ -28,6 +28,8 @@ function GameOverScene:update()
             SCENE_MANAGER:switchScene(StartScene)
         else
             DrinksCorrect = 0
+            
+            RandomizeOrder()
             SCENE_MANAGER:switchScene(GameScene)
         end
     end

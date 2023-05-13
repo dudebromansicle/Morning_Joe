@@ -35,7 +35,10 @@ function GameScene:init()
     
     IngridentText(currentingrident)
     DrinkBar()
-    Customer()
+
+    Customer(CustomerOrder[#CustomerOrder])
+
+    table.remove(CustomerOrder, #CustomerOrder)
     
 
 end
@@ -86,7 +89,7 @@ function GameScene:update()
        
         self.drinkmade = true 
         crankinstruction = false
-        if SteveFavorites[1] == SelectionArray[1] and SteveFavorites[2] == SelectionArray[2] and SteveFavorites[3] == SelectionArray[3] then
+        if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
             DrinksCorrect = DrinksCorrect + 1
         end
         print("DrinksCorrect:" ..DrinksCorrect)
