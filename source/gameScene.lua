@@ -15,6 +15,8 @@ local gfx <const> = playdate.graphics
 class('GameScene').extends(gfx.sprite)
 
 function GameScene:init()
+    NumberCorrect = 0
+    Nomoreinput = false
     crankinstruction = false
 	GameScene.super.init(self)
     currentingrident = 1
@@ -74,7 +76,7 @@ function GameScene:update()
         Ingrident(-1)
     end
     --add drink made
-    if pd.buttonJustPressed(pd.kButtonA) and self.currentpick == 4 then
+    if pd.buttonJustPressed(pd.kButtonA) and Nomoreinput == true then
        
         self.drinkmade = true 
         crankinstruction = false
@@ -96,7 +98,7 @@ function GameScene:update()
     
     
     
-    if pd.buttonJustPressed(pd.kButtonB) and self.currentpick > 1 then
+    if pd.buttonJustPressed(pd.kButtonB) and self.currentpick > 1 and Nomoreinput == false then
         self.currentpick = self.currentpick - 1
 
         table.remove(SelectionArray,self.currentpick)
@@ -107,9 +109,9 @@ function GameScene:update()
         end
 
     end
-    if #SelectionArray == 3 and self.drinkmade == false then
+    if #SelectionArray == 3 and self.drinkmade == false  and Nomoreinput == false then
         crankinstruction = true
-        local currentcranks = pd.getCrankTicks(12)
+        local currentcranks = pd.getCrankTicks(36)
         --print("currentcranks: "..currentcranks)
         DrinkBarIncrease(currentcranks)
     else

@@ -30,9 +30,7 @@ end
 function TasteDrink() 
     print("TasteDrink")
     CustomerDialouge(1)
-    
     CustomerDialouge(2)
-    
     CustomerDialouge(3)
 end
 

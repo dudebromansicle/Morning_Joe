@@ -7,7 +7,7 @@ local gfx <const> = playdate.graphics
 class('CustomerDialouge').extends(gfx.sprite)
 
 function CustomerDialouge:init(Myindex)
-   
+   Nomoreinput = true
 	CustomerDialouge.super.init(self)
     local text = "Gross"
     
@@ -15,16 +15,18 @@ function CustomerDialouge:init(Myindex)
     
     for i = 1,3 do 
         if SteveFavorites[i] == SelectionArray[Myindex] then
-            text = "good"
+            text = "Good"
         end        
     end
     
     if SteveFavorites[Myindex] == SelectionArray[Myindex] then
-        text = "perfect"
+        text = "Perfect"
+        NumberCorrect = NumberCorrect + 1
     
     end
-    
-    
+    if NumberCorrect == 3 and Myindex == 3 then
+        DrinksCorrect = DrinksCorrect + 1
+    end
     
    local gameOverImage = gfx.image.new(gfx.getTextSize(text))
     gfx.pushContext(gameOverImage)

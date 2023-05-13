@@ -6,7 +6,7 @@ local gfx <const> = playdate.graphics
 class('GameOverScene').extends(gfx.sprite)
 
 function GameOverScene:init(text)
-    local text = "This will be Game Over Screen"
+    local text = "You made ".. DrinksCorrect .. " perfect drinks."
     local gameOverImage = gfx.image.new(gfx.getTextSize(text))
     gfx.pushContext(gameOverImage)
         gfx.drawText(text, 0, 0)

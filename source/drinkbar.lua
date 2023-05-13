@@ -40,7 +40,8 @@ function DrinkBar:update()
     self:setImage(RectImage)
 
     self:moveTo(100+DrinkBarsLength/2, 150)
-    if DrinkBarsLength > 99 then
+    if DrinkBarsLength > 159 then
+        DrinkBarsLength = 160
         TasteDrink()
     end
 

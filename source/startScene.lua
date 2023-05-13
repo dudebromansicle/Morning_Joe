@@ -7,7 +7,8 @@ local gfx <const> = playdate.graphics
 class('StartScene').extends(gfx.sprite)
 
 function StartScene:init()
-	local text = "This Will be the Start Screen"
+	DrinksCorrect = 0
+    local text = "This Will be the Start Screen"
     local gameOverImage = gfx.image.new(gfx.getTextSize(text))
     gfx.pushContext(gameOverImage)
         gfx.drawText(text, 0, 0)
