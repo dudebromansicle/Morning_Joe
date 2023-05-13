@@ -110,13 +110,13 @@ function CustomerDialouge:init(Myindex)
     
     self:setImage(gameOverImage)
     if Myindex == 1 then
-        self:moveTo(50+self.width/2, 80)
+        self:moveTo(200+self.width/2, 112)
     end
     if Myindex == 2 then
-        self:moveTo(50+self.width/2, 100)
+        self:moveTo(200+self.width/2, 132)
     end
     if Myindex == 3 then
-        self:moveTo(50+self.width/2, 120)
+        self:moveTo(200+self.width/2, 152)
     end
     
     self:setZIndex(151)
