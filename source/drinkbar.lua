@@ -52,7 +52,7 @@ function DrinkBar:update()
         self:moveTo(100+DrinkBarsLength/2, 130)
     end
 
-    if DrinkBarsLength > 159 then
+    if DrinkBarsLength > 156 and DrinkBarsLength < 160 then
         DrinkBarsLength = 160
         TasteDrink()
     end
