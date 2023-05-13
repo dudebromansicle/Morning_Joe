@@ -14,6 +14,7 @@ function Customer:init(place)
     
     Customer.super.init(self)
 
+    self.myAnimator = gfx.animator.new(1000, 0, 200, pd.easingFunctions.outQuint,200)
     self.name = place
 
     if place == 1 then
@@ -41,7 +42,7 @@ function Customer:init(place)
     
     
     
-    self:moveTo(320,64)
+    self:moveTo(500,64)
     
     self:setZIndex(9)
     self:add()
@@ -59,4 +60,8 @@ function TasteDrink()
 end
 
     
+function Customer:update() 
+    print("self.myAnimator:currentValue(): "..self.myAnimator:currentValue())
+    self:moveTo(500-self.myAnimator:currentValue(),64)
+end
     
