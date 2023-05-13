@@ -64,7 +64,12 @@ function BigCard:update()
         self:remove()
     
     end
-   
+   if #SelectionArray ~= nil then
+        if self.newspot > #SelectionArray then
+            self:remove()
+        end
+   end
+    
     
     self:moveTo(self.x+(self.MyX-self.x)/2,self.y+(self.MyY-self.y)/2)
 end

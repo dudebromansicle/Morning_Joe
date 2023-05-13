@@ -61,7 +61,7 @@ end
 
     
 function Customer:update() 
-    print("self.myAnimator:currentValue(): "..self.myAnimator:currentValue())
+    --print("self.myAnimator:currentValue(): "..self.myAnimator:currentValue())
     self:moveTo(500-self.myAnimator:currentValue(),64)
 end
     

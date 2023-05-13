@@ -28,7 +28,7 @@ end
 
 
 function DrinkBarIncrease(Addition)
-    DrinkBarsLength = DrinkBarsLength + Addition
+    DrinkBarsLength = DrinkBarsLength + math.abs(Addition)
     if DrinkBarsLength < 1 then
         DrinkBarsLength = 1
     end
@@ -59,6 +59,10 @@ function DrinkBar:update()
         FinalDrink()
         TasteDrink()
         self.donebefore = true
+    end
+
+    if pd.buttonJustPressed(pd.kButtonB) then
+        DrinkBarsLength = 1
     end
 
 

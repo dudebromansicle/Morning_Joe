@@ -43,12 +43,12 @@ function CustomerDialouge:init(Myindex)
         --print("State AnnaFavorites")
         for i = 1,3 do 
             if AnnaFavorites[i] == SelectionArray[Myindex] then
-                text = "Try the "..flavor.." elsewhere."
+                text = flavor.." better elsewhere."
             end        
         end
         
         if AnnaFavorites[Myindex] == SelectionArray[Myindex] then
-            text = "The "..flavor.." is perfect."
+            text = "The "..flavor.." is perfect there."
         
         end
         
@@ -58,12 +58,12 @@ function CustomerDialouge:init(Myindex)
         --print("State AbigailFavorites")
         for i = 1,3 do 
             if AbigailFavorites[i] == SelectionArray[Myindex] then
-                text = "Move "..flavor.." elsewhere."
+                text = flavor.." better elsewhere."
             end        
         end
         
         if AbigailFavorites[Myindex] == SelectionArray[Myindex] then
-            text = "The "..flavor.." is perfect."
+            text = "The "..flavor.." is perfect there."
         
         end
         
@@ -71,12 +71,12 @@ function CustomerDialouge:init(Myindex)
         --print("State GavinFavorites")
         for i = 1,3 do 
             if GavinFavorites[i] == SelectionArray[Myindex] then
-                text = "Move "..flavor.." elsewhere."
+                text = flavor.." better elsewhere."
             end        
         end
         
         if GavinFavorites[Myindex] == SelectionArray[Myindex] then
-            text = "Move "..flavor.." is perfect."
+            text = "Move "..flavor.." is perfect there."
         
         end
        
@@ -84,7 +84,7 @@ function CustomerDialouge:init(Myindex)
         --print("State JaiceFavorites")
         for i = 1,3 do 
             if JaiceFavorites[i] == SelectionArray[Myindex] then
-                text = "Move "..flavor.." elsewhere."
+                text = flavor.." better elsewhere."
             end        
         end
         
@@ -92,7 +92,7 @@ function CustomerDialouge:init(Myindex)
            
             
             
-            text = "The "..flavor.." is perfect."
+            text = "The "..flavor.." is perfect there."
         
         end
     

@@ -28,7 +28,14 @@ function GameScene:init()
     HelloText()
     Table()
 
-    
+    local backgroundImage = gfx.image.new("images/Store_background")
+    gfx.sprite.setBackgroundDrawingCallback(
+        function( x, y, width, height )
+			gfx.setClipRect(x, y, width, height)
+			backgroundImage:draw(0,0)
+			gfx.clearClipRect()
+		end
+	)
 
     NumberCorrect = 0
     Nomoreinput = false
