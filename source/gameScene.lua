@@ -22,6 +22,10 @@ class('GameScene').extends(gfx.sprite)
 
 function GameScene:init()
     CustomerNumber = CustomerNumber+1
+    
+
+    
+
     NumberCorrect = 0
     Nomoreinput = false
     crankinstruction = false
@@ -37,6 +41,13 @@ function GameScene:init()
     MyMax = 8
     CreateDecks(MyMax)
     
+    for i = 1,#Solvedlist do 
+        if Solvedlist[i] == CustomerOrder[#CustomerOrder] then
+            table.remove(CustomerOrder, #CustomerOrder)
+        end
+    end
+
+
     IngridentText(currentingrident)
     DrinkBar()
     print("CustomerOrder[#CustomerOrder]")
@@ -145,24 +156,29 @@ function GameScene:update()
             if AbigailFavorites[1] == SelectionArray[1] and AbigailFavorites[2] == SelectionArray[2] and AbigailFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
+                table.insert(Solvedlist, Whom)
+
             end
         elseif Whom == 2 then
             print("Check AnnaFavorites")
             if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
+                table.insert(Solvedlist, Whom)
             end
         elseif Whom == 3 then
             print("Check JaiceFavorites")
             if JaiceFavorites[1] == SelectionArray[1] and JaiceFavorites[2] == SelectionArray[2] and JaiceFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
+                table.insert(Solvedlist, Whom)
             end
         elseif Whom == 4 then
             print("Check GavinFavorites")
             if GavinFavorites[1] == SelectionArray[1] and GavinFavorites[2] == SelectionArray[2] and GavinFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
+                table.insert(Solvedlist, Whom)
             end
         end
         -- if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
@@ -171,7 +187,7 @@ function GameScene:update()
 
 
         print("DrinksCorrect:" ..DrinksCorrect)
-        if CustomerNumber == 4 then
+        if CustomerNumber == 4-TotalSolved then
             SCENE_MANAGER:switchScene(GameOverScene)
         else
             SCENE_MANAGER:switchScene(GameScene)

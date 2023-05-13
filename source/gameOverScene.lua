@@ -9,12 +9,14 @@ function GameOverScene:init(text)
     Days = Days+1
     CustomerNumber = 0
     
+    TotalSolved = TotalSolved+DrinksCorrect
+    
     print("DrinksCorrect:" ..DrinksCorrect)
     local text = "Broken"
     if DrinksCorrect == 4 then
         text = "Congrats!  You made Everyone a perfect drink.  It took you "..Days.."days."
     else
-        text = "Day "..Days..". You made ".. DrinksCorrect .. " perfect drinks."
+        text = "Day "..Days..". You have made ".. TotalSolved .. " perfect drinks so far."
     end
     
     local gameOverImage = gfx.image.new(gfx.getTextSize(text))

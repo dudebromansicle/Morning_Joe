@@ -22,7 +22,8 @@ function StartScene:init()
     local gameOverSprite = gfx.sprite.new(gameOverImage)
     gameOverSprite:moveTo(200, 120)
     gameOverSprite:add()
-
+    Solvedlist = {}
+    TotalSolved = 0
     self:add()
     RandomizeFavorites()
     
@@ -112,6 +113,7 @@ function RandomizeOrder()
     local b = 100
     local c = 100
     local d = 100
+
     a = math.random(1,4)
 
     b = math.random(1,4)
