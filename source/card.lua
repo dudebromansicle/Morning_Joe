@@ -25,6 +25,7 @@ function Card:init(place)
     
     self.MyY = self.Y
 
+    self:setZIndex(150)
     
     self:add()
     self.spot = place

@@ -47,6 +47,8 @@ function IngridentText:init(ingridentnumber)
     self:setImage(gameOverImage)
     
     self:moveTo(200, 230)
+    
+    self:setZIndex(151)
 
     self:add()
 

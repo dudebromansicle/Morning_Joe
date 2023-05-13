@@ -1,6 +1,7 @@
 
 import "CoreLibs/sprites"
 import "gameScene"
+import "customer"
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
@@ -38,7 +39,12 @@ function DrinkBar:update()
     gfx.popContext()
     self:setImage(RectImage)
 
-    self:moveTo(100+DrinkBarsLength/2, 100)
+    self:moveTo(100+DrinkBarsLength/2, 150)
+    if DrinkBarsLength > 99 then
+        TasteDrink()
+    end
+
+
 end
     
     

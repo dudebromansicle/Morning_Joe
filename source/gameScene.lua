@@ -1,6 +1,8 @@
 import "gameOverScene"
 import "card"
-import "DrinkBar"
+import "drinkBar"
+
+import "customer"
 
 
 import "ingridenttext"
@@ -26,6 +28,7 @@ function GameScene:init()
     
     IngridentText(currentingrident)
     DrinkBar()
+    Customer()
 
 end
 
@@ -106,7 +109,7 @@ function GameScene:update()
     end
     if #SelectionArray == 3 and self.drinkmade == false then
         crankinstruction = true
-        local currentcranks = pd.getCrankTicks(6)
+        local currentcranks = pd.getCrankTicks(12)
         --print("currentcranks: "..currentcranks)
         DrinkBarIncrease(currentcranks)
     else
