@@ -46,20 +46,20 @@ function CustomerFavorites:init(CustomerName,place)
     --     print("Favorites[i]: "..Favorites[i])
     -- end
     
-    local cardImage = gfx.image.new("images/Chocolate_Small")
+    local cardImage = gfx.image.new("images/Chocolate_Small_SMALL")
 
     if Favorites[place] == 1 then
-        cardImage = gfx.image.new("images/Chocolate_Small")
+        cardImage = gfx.image.new("images/Chocolate_Small_SMALL")
     elseif Favorites[place] == 2 then
-        cardImage = gfx.image.new("images/Vanilla_Small")
+        cardImage = gfx.image.new("images/Vanilla_Small_SMALL")
     elseif Favorites[place] == 3 then
-        cardImage = gfx.image.new("images/Honey_Small")
+        cardImage = gfx.image.new("images/Honey_Small_SMALL")
     elseif Favorites[place] == 4 then
-        cardImage = gfx.image.new("images/Milk_Small")
+        cardImage = gfx.image.new("images/Milk_Small_SMALL")
     elseif Favorites[place] == 5 then
-        cardImage = gfx.image.new("images/Pistachio_Small")
+        cardImage = gfx.image.new("images/Pistachio_Small_SMALL")
     elseif Favorites[place] == 6 then
-        cardImage = gfx.image.new("images/Cinnamon_Small")
+        cardImage = gfx.image.new("images/Cinnamon_Small_SMALL")
     end
     
     

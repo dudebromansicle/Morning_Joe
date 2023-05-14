@@ -32,7 +32,7 @@ function AnswerCover:update()
     if ThisisCorrect == true then
         self.MyX = -80
     end
-    self:moveTo(self.x+(self.MyX-self.x)/2,self.y+(self.MyY-self.y)/2)
+    self:moveTo(self.x+(self.MyX-self.x)/4,self.y+(self.MyY-self.y)/4)
 end
 
     

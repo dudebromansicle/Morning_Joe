@@ -15,9 +15,9 @@ function Finalcard:init(myID)
     Finalcard.super.init(self)
    
 
-    local cardImage = gfx.image.new("images/Chocolate_Small")
+    local cardImage = gfx.image.new("images/Chocolate_Small_SMALL")
     if SelectionArray[myID] == 1 then
-        cardImage = gfx.image.new("images/Chocolate_Small")
+        cardImage = gfx.image.new("images/Chocolate_Small_SMALL")
         local testingtext = "bad"
         
         
@@ -36,7 +36,7 @@ function Finalcard:init(myID)
 
         Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 2 then
-        cardImage = gfx.image.new("images/Vanilla_Small")
+        cardImage = gfx.image.new("images/Vanilla_Small_SMALL")
         local testingtext = "bad"
         
         
@@ -55,7 +55,7 @@ function Finalcard:init(myID)
 
         Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 3 then
-        cardImage = gfx.image.new("images/Honey_Small")
+        cardImage = gfx.image.new("images/Honey_Small_SMALL")
         local testingtext = "bad"
         
         
@@ -74,7 +74,7 @@ function Finalcard:init(myID)
 
         Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 4 then
-        cardImage = gfx.image.new("images/Milk_Small")
+        cardImage = gfx.image.new("images/Milk_Small_SMALL")
         local testingtext = "bad"
         
         
@@ -93,7 +93,7 @@ function Finalcard:init(myID)
 
         Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 5 then
-        cardImage = gfx.image.new("images/Pistachio_Small")
+        cardImage = gfx.image.new("images/Pistachio_Small_SMALL")
         local testingtext = "bad"
         
         
@@ -112,7 +112,7 @@ function Finalcard:init(myID)
 
         Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 6 then
-        cardImage = gfx.image.new("images/Cinnamon_Small")
+        cardImage = gfx.image.new("images/Cinnamon_Small_SMALL")
         local testingtext = "bad"
         
         
