@@ -1,7 +1,7 @@
-
-name=SCENEMANAGER
-author=Mpat.
-description=manage scene.
-bundleID=com.panic.SCENEMANAGER
-version=0.01
+name=Mornin' Joe
+author=Mattpat.
+description=Serve your customers some coffee.
+bundleID=com.panic.MorninJoe
+version=1.00
 buildNumber=123
+imagePath=images/Icon
