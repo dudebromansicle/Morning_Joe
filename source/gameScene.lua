@@ -28,7 +28,7 @@ function GameScene:init()
     HelloText()
     Table()
 
-    local backgroundImage = gfx.image.new("images/Store_background")
+    local backgroundImage = gfx.image.new("images/BackgrounWithchairsandTablesd")
     gfx.sprite.setBackgroundDrawingCallback(
         function( x, y, width, height )
 			gfx.setClipRect(x, y, width, height)

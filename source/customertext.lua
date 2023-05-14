@@ -20,7 +20,7 @@ function CustomerText:init(CustomerName)
     gfx.popContext()
     
     
-    self:setImage(gameOverImage)
+    --self:setImage(gameOverImage)
     
     self:moveTo(398-(self.width)/2, 10)
     
