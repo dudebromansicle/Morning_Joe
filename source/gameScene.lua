@@ -66,8 +66,8 @@ function GameScene:init()
 
     IngridentText(currentingrident)
     DrinkBar()
-    print("CustomerOrder[#CustomerOrder]")
-    print(CustomerOrder[#CustomerOrder])
+    --print("CustomerOrder[#CustomerOrder]")
+    --print(CustomerOrder[#CustomerOrder])
     Whom = CustomerOrder[#CustomerOrder]
     Customer(CustomerOrder[#CustomerOrder])
 
@@ -110,7 +110,7 @@ function Ingrident(NewValue)
         end
     end 
 
-    print("Ingrident:"..currentingrident)
+    --print("Ingrident:"..currentingrident)
     if #SelectionArray < 3 then
         
         IngridentText(currentingrident)
@@ -181,7 +181,7 @@ function GameScene:update()
         crankinstruction = false
         
         if Whom == 1 then
-            print("Check AbigailFavorites")
+            --print("Check AbigailFavorites")
             if AbigailFavorites[1] == SelectionArray[1] and AbigailFavorites[2] == SelectionArray[2] and AbigailFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
@@ -189,21 +189,21 @@ function GameScene:update()
 
             end
         elseif Whom == 2 then
-            print("Check AnnaFavorites")
+            --print("Check AnnaFavorites")
             if AnnaFavorites[1] == SelectionArray[1] and AnnaFavorites[2] == SelectionArray[2] and AnnaFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
                 table.insert(Solvedlist, Whom)
             end
         elseif Whom == 3 then
-            print("Check JaiceFavorites")
+            --print("Check JaiceFavorites")
             if JaiceFavorites[1] == SelectionArray[1] and JaiceFavorites[2] == SelectionArray[2] and JaiceFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
                 table.insert(Solvedlist, Whom)
             end
         elseif Whom == 4 then
-            print("Check GavinFavorites")
+            --print("Check GavinFavorites")
             if GavinFavorites[1] == SelectionArray[1] and GavinFavorites[2] == SelectionArray[2] and GavinFavorites[3] == SelectionArray[3] then
                 DrinksCorrect = DrinksCorrect + 1
                 ThisisCorrect = true
@@ -215,7 +215,7 @@ function GameScene:update()
         -- end
 
 
-        print("DrinksCorrect:" ..DrinksCorrect)
+        --print("DrinksCorrect:" ..DrinksCorrect)
         
         
         if CustomerNumber == 4-TotalSolved then
@@ -241,7 +241,7 @@ function GameScene:update()
         swipesound:play(1)
         
         for i = 1,#SelectionArray do 
-            print("SelectionArray:"..SelectionArray[i])
+            --print("SelectionArray:"..SelectionArray[i])
         end
         self.currentpick = self.currentpick + 1
         Ingrident(1)
@@ -258,7 +258,7 @@ function GameScene:update()
 
         
         for i = 1,#SelectionArray do 
-            print("SelectionArray:"..SelectionArray[i])
+            --print("SelectionArray:"..SelectionArray[i])
         end
         local swipesound = 	pd.sound.fileplayer.new("sounds/Swipe")
             --platformlanding:setVolume(0.01)

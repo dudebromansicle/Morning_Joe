@@ -7,22 +7,22 @@ local gfx <const> = playdate.graphics
 class('CustomerFavorites').extends(gfx.sprite)
 
 function CustomerFavorites:init(CustomerName,place)
-    print("CustomerFavorites:place: "..place)
-    print("CustomerFavorites:CustomerName: "..CustomerName)
+    --print("CustomerFavorites:place: "..place)
+    --print("CustomerFavorites:CustomerName: "..CustomerName)
 	CustomerFavorites.super.init(self)
     local Favorites = {}
     
     if CustomerName == 2 then
         for i = 1, 3 do
             Favorites[i] = AnnaFavorites[i]
-            print("CustomerFavorites:AnnaFavorites: "..Favorites[i])
+            --print("CustomerFavorites:AnnaFavorites: "..Favorites[i])
         end
     end
     if CustomerName == 1 then
         
         for i = 1, 3 do
             Favorites[i] = AbigailFavorites[i]
-            print("CustomerFavorites:AbigailFavorites: "..Favorites[i])
+            --print("CustomerFavorites:AbigailFavorites: "..Favorites[i])
         end
         
     end
@@ -30,14 +30,14 @@ function CustomerFavorites:init(CustomerName,place)
         
         for i = 1, 3 do
             Favorites[i] = GavinFavorites[i]
-            print("CustomerFavorites:GavinFavorites: "..Favorites[i])
+            --print("CustomerFavorites:GavinFavorites: "..Favorites[i])
         end
     end
     if CustomerName == 3 then
         
         for i = 1, 3 do
             Favorites[i] = JaiceFavorites[i]
-            print("CustomerFavorites:JaiceFavorites: "..Favorites[i])
+            --print("CustomerFavorites:JaiceFavorites: "..Favorites[i])
         end
     end
 

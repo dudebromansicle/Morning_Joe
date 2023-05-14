@@ -8,7 +8,7 @@ local gfx <const> = playdate.graphics
 class('Credits').extends(gfx.sprite)
 
 function Credits:init(mynumberbaby)
-    print("mynumberbaby ".. mynumberbaby)
+    --print("mynumberbaby ".. mynumberbaby)
     Credits.super.init(self)
 
     Dudeimage = gfx.image.new("images/MP_Credit")

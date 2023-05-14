@@ -12,7 +12,7 @@ function StoreAnimation:init()
     StoreAnimation.super.init(self)
     local bahbahblacksheep = math.random(1,2)
 
-    print("bahbahblacksheep: "..bahbahblacksheep)
+    --print("bahbahblacksheep: "..bahbahblacksheep)
     local string = "images/Cafe_Atnight-table-143-194"
 
     if bahbahblacksheep == 1 then

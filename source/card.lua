@@ -10,7 +10,7 @@ class('Card').extends(gfx.sprite)
 function Card:init(place)
     Card.super.init(self)
 
-    print("Card.  place:"..place)
+    --print("Card.  place:"..place)
 
     local cardImage = gfx.image.new("images/Chocolate_Small")
     if place == 1 then

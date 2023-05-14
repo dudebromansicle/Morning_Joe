@@ -9,8 +9,8 @@ class('BigCard').extends(gfx.sprite)
 
 function BigCard:init(MyLocation, place)
     BigCard.super.init(self)
-    print("MyLocation:" ..MyLocation)
-    print("place:" ..place)
+    --print("MyLocation:" ..MyLocation)
+    --print("place:" ..place)
 
     local cardImage = gfx.image.new("images/Chocolate_Big")
 
@@ -46,7 +46,7 @@ function BigCard:init(MyLocation, place)
     self.spot = place
     
     self.newspot = MyLocation-1
-    print("self.newspot"..self.newspot)
+    --print("self.newspot"..self.newspot)
 
    
    
