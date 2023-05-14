@@ -26,7 +26,7 @@ function HelloText:init(CustomerName)
     
     self:moveTo(180+self.width/2, 120)
     
-    self:setZIndex(151)
+    self:setZIndex(16)
 
     self:add()
     self.destruction = pd.timer.new(3000)
