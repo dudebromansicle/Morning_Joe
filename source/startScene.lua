@@ -37,10 +37,16 @@ function StartScene:init()
     
     RandomizeOrder()
 
+    if Startmusic ~= nil then
+        
+        Startmusic:stop()
+        print("stop start music")
+    else
+        Startmusic = 	pd.sound.fileplayer.new("sounds/playjam_soundtrack")
+        Startmusic:setVolume(1)
+    end
     
-    Startmusic = 	pd.sound.fileplayer.new("sounds/playjam_soundtrack")
-    Startmusic:setVolume(1)
-    Startmusic:stop()
+    
 end
 
 function RandomizeFavorites()
@@ -157,7 +163,7 @@ function StartScene:update()
    
     if pd.buttonJustPressed(pd.kButtonA) then
         
-        Startmusic:play(1)
+        Startmusic:play(0)
         SCENE_MANAGER:switchScene(GameScene)
         
         local mystartsound = 	pd.sound.fileplayer.new("sounds/Clickonsomethingstart")
