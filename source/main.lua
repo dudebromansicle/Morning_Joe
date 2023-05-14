@@ -13,6 +13,9 @@ import "gameScene"
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
+local MenuImage = gfx.image.new("images/PauseScreen_Background")
+pd.setMenuImage(MenuImage)
+
 playdate.ui.crankIndicator:start()
 SCENE_MANAGER = SceneManager()
 
