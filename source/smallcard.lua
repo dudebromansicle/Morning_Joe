@@ -1,6 +1,10 @@
 
 import "CoreLibs/sprites"
 import "gameScene"
+import "addicon"
+
+import "customerfavorites"
+
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
@@ -14,16 +18,118 @@ function Finalcard:init(myID)
     local cardImage = gfx.image.new("images/Chocolate_Small")
     if SelectionArray[myID] == 1 then
         cardImage = gfx.image.new("images/Chocolate_Small")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 1 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 1 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 2 then
         cardImage = gfx.image.new("images/Vanilla_Small")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 2 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 2 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 3 then
         cardImage = gfx.image.new("images/Honey_Small")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 3 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 3 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 4 then
         cardImage = gfx.image.new("images/Milk_Small")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 4 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 4 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 5 then
         cardImage = gfx.image.new("images/Pistachio_Small")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 5 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 5 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
     elseif SelectionArray[myID] == 6 then
         cardImage = gfx.image.new("images/Cinnamon_Small")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 6 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 6 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
     end
     
     self:setImage(cardImage)

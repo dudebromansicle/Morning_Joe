@@ -10,7 +10,7 @@ function CustomerFavorites:init(CustomerName,place)
     --print("CustomerFavorites:place: "..place)
     --print("CustomerFavorites:CustomerName: "..CustomerName)
 	CustomerFavorites.super.init(self)
-    local Favorites = {}
+    Favorites = {}
     
     if CustomerName == 2 then
         for i = 1, 3 do
