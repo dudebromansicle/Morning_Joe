@@ -17,7 +17,7 @@ function WordBubble:init(destroy)
     
     
     
-    self:moveTo(280,120)
+    self:moveTo(355,95)
     self:setZIndex(11)
     self:add()
     

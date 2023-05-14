@@ -48,7 +48,7 @@ function CustomerDialouge:init(Myindex)
         end
         
         if AnnaFavorites[Myindex] == SelectionArray[Myindex] then
-            text = "The "..flavor.." is perfect there."
+            text = "The "..flavor.." is perfect."
         
         end
         
@@ -63,7 +63,7 @@ function CustomerDialouge:init(Myindex)
         end
         
         if AbigailFavorites[Myindex] == SelectionArray[Myindex] then
-            text = "The "..flavor.." is perfect there."
+            text = "The "..flavor.." is perfect."
         
         end
         
@@ -76,7 +76,7 @@ function CustomerDialouge:init(Myindex)
         end
         
         if GavinFavorites[Myindex] == SelectionArray[Myindex] then
-            text = flavor.." is perfect there."
+            text = flavor.." is perfect."
         
         end
        
@@ -92,7 +92,7 @@ function CustomerDialouge:init(Myindex)
            
             
             
-            text = "The "..flavor.." is perfect there."
+            text = "The "..flavor.." is perfect."
         
         end
     
@@ -108,13 +108,13 @@ function CustomerDialouge:init(Myindex)
     
     self:setImage(gameOverImage)
     if Myindex == 1 then
-        self:moveTo(170+self.width/2, 112)
+        self:moveTo(172+self.width/2, 112)
     end
     if Myindex == 2 then
-        self:moveTo(170+self.width/2, 132)
+        self:moveTo(172+self.width/2, 132)
     end
     if Myindex == 3 then
-        self:moveTo(170+self.width/2, 152)
+        self:moveTo(172+self.width/2, 152)
     end
     
     self:setZIndex(151)
