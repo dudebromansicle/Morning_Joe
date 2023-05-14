@@ -19,10 +19,10 @@ function Steam:init()
     self:moveTo(94,80)
     
     self.myAnimator = gfx.animator.new(300, 0, 240)
-    self:setZIndex(900)
+    self:setZIndex(21)
     self:add()
     
-    self.MyX = 130
+    self.MyX = 135
 
     self.MyY = 85 
 

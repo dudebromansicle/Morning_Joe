@@ -15,12 +15,34 @@ function FinalDrink:init()
     
     FinalDrink.super.init(self)
     SmokeScreen()
-
+    
     local Dudeimage = gfx.image.new("images/Cup1")
+
+    local holymoly = math.random(1,3)
+    print("holymoly: "..holymoly)
+    if holymoly == 1 then
+        Dudeimage = gfx.image.new("images/Cup1")
+    elseif holymoly == 2 then
+        
+        Dudeimage = gfx.image.new("images/Cup_2")
+    elseif holymoly == 3 then
+        
+        Dudeimage = gfx.image.new("images/Cup_3")
+    end
+    
+    
     self:setImage(Dudeimage)
     
-    
-    self:moveTo(94,110)
+    if holymoly == 1 then
+        
+        self:moveTo(94,110)
+    elseif holymoly == 2 then
+        
+        self:moveTo(90,110)
+    elseif holymoly == 3 then
+        
+        self:moveTo(94,110)
+    end
 
     self.MyX = 170-(self.width/2)
 
