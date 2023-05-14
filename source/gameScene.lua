@@ -123,10 +123,18 @@ function GameScene:update()
    
     if pd.buttonJustPressed(pd.kButtonRight) then
         Ingrident(1)
+        
+        local swipesound = 	pd.sound.fileplayer.new("sounds/Slide")
+        --platformlanding:setVolume(0.01)
+        swipesound:play(1)
     end
 
     if pd.buttonJustPressed(pd.kButtonLeft) then
         Ingrident(-1)
+        
+        local swipesound = 	pd.sound.fileplayer.new("sounds/Slide")
+        --platformlanding:setVolume(0.01)
+        swipesound:play(1)
     end
     --add drink made
 
@@ -212,6 +220,10 @@ function GameScene:update()
         
         BigCard(#SelectionArray+1, currentingrident)
         
+        local swipesound = 	pd.sound.fileplayer.new("sounds/Swipe")
+        --platformlanding:setVolume(0.01)
+        swipesound:play(1)
+        
         for i = 1,#SelectionArray do 
             print("SelectionArray:"..SelectionArray[i])
         end
@@ -232,6 +244,10 @@ function GameScene:update()
         for i = 1,#SelectionArray do 
             print("SelectionArray:"..SelectionArray[i])
         end
+        local swipesound = 	pd.sound.fileplayer.new("sounds/Swipe")
+            --platformlanding:setVolume(0.01)
+            swipesound:play(1)
+
 
     end
     if #SelectionArray == 3 and self.drinkmade == false  and Nomoreinput == false then
