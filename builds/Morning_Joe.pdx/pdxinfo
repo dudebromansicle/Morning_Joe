@@ -1,8 +1,2 @@
-name=MorninJoe
-author=Mpat.
-description=Serve Coffee
-bundleID=com.panic.MorninJoe
-version=1.09
-buildNumber=123
 pdxversion=11300
-buildtime=737397658
+buildtime=737402200

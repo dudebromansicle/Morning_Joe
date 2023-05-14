@@ -42,7 +42,7 @@ function Customer:init(place)
     
     
     
-    self:moveTo(500,54)
+    self:moveTo(300,54)
     
     self:setZIndex(9)
     self:add()

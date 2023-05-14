@@ -21,14 +21,14 @@ function WordBubble:init(destroy)
     
 
     if destroy == true then
-        self.destruction = pd.timer.new(2000)
+        self.destruction = pd.timer.new(3000)
     end
 
 end
 
 function WordBubble:update() 
     if self.destruction ~= nil then
-        if self.destruction.currentTime == 2000 then
+        if self.destruction.currentTime == 3000 then
             self:remove()
         end
     end

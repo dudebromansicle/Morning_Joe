@@ -49,14 +49,14 @@ function RandomHello:init(CustomerName)
     self:setZIndex(151)
 
     self:add()
-    self.destruction = pd.timer.new(2000)
+    self.destruction = pd.timer.new(3000)
     
 
 end
 
 function RandomHello:update()
     --print(self.destruction.currentTime)
-    if self.destruction.currentTime == 2000 then
+    if self.destruction.currentTime == 3000 then
         self:remove()
     end
 end
