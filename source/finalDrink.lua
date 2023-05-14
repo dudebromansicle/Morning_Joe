@@ -4,6 +4,8 @@ import "gameScene"
 import "smallcard"
 import "smokescreen"
 
+import "steam"
+
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
 
@@ -14,7 +16,7 @@ function FinalDrink:init()
     FinalDrink.super.init(self)
     SmokeScreen()
 
-    local Dudeimage = gfx.image.new("images/TEMP_Mug")
+    local Dudeimage = gfx.image.new("images/Cup1")
     self:setImage(Dudeimage)
     
     
@@ -27,7 +29,7 @@ function FinalDrink:init()
     self:add()
 
     MakeChecklist()
-    
+    Steam()
 
 
 
