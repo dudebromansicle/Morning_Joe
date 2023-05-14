@@ -1,4 +1,5 @@
 import "startScene"
+import "credits"
 
 local pd <const> = playdate
 local gfx <const> = playdate.graphics
@@ -13,8 +14,12 @@ function GameOverScene:init(text)
     
     print("DrinksCorrect:" ..DrinksCorrect)
     local text = "Broken"
-    if DrinksCorrect == 4 then
-        text = "Congrats!  You made Everyone a perfect drink.  It took you "..Days.."days."
+    if TotalSolved == 4 then
+        text = "Congrats!  It took you "..Days.." days to win."
+        
+        for i = 1,4 do 
+            Credits(i)
+        end
     else
         text = "Day "..Days..". You have made ".. TotalSolved .. " perfect drinks so far."
     end
@@ -24,7 +29,7 @@ function GameOverScene:init(text)
         gfx.drawText(text, 0, 0)
     gfx.popContext()
     local gameOverSprite = gfx.sprite.new(gameOverImage)
-    gameOverSprite:moveTo(200, 120)
+    gameOverSprite:moveTo(200, 20)
     gameOverSprite:add()
 
     self:add()
@@ -33,7 +38,7 @@ end
 
 function GameOverScene:update()
     if pd.buttonJustPressed(pd.kButtonA) then
-        if DrinksCorrect == 4 then
+        if TotalSolved == 4 then
             SCENE_MANAGER:switchScene(StartScene)
         else
             DrinksCorrect = 0
