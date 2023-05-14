@@ -14,7 +14,7 @@ function Customer:init(place)
     
     Customer.super.init(self)
 
-    self.myAnimator = gfx.animator.new(1000, 0, 200, pd.easingFunctions.outQuint,200)
+    --self.myAnimator = gfx.animator.new(1000, 0, 200, pd.easingFunctions.outQuint,200)
     self.name = place
 
     if place == 1 then
@@ -62,6 +62,6 @@ end
     
 function Customer:update() 
     --print("self.myAnimator:currentValue(): "..self.myAnimator:currentValue())
-    self:moveTo(500-self.myAnimator:currentValue(),54)
+    --self:moveTo(500-self.myAnimator:currentValue(),54)
 end
     
