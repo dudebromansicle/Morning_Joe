@@ -35,7 +35,7 @@ function IngridentText:init(ingridentnumber)
         text = "Caramel"
     elseif ingridentnumber == 8 then 
         
-        text = "Condensed Milk"
+        text = "Sweet Milk"
     end
     
    local gameOverImage = gfx.image.new(gfx.getTextSize(text))

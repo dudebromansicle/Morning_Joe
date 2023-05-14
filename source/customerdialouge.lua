@@ -33,7 +33,7 @@ function CustomerDialouge:init(Myindex)
     elseif SelectionArray[Myindex] == 7 then
         flavor = "Caramel"
     elseif SelectionArray[Myindex] == 8 then
-        flavor = "Condensed Milk"
+        flavor = "Sweet Milk"
     else
         flavor = "broken code"
     end

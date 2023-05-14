@@ -34,7 +34,7 @@ function Credits:init(mynumberbaby)
     
     
     self:moveTo(-900+300*(mynumberbaby),160)
-    self:setZIndex(300)
+    self:setZIndex(1)
     self:add()
     
 

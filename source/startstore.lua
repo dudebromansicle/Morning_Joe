@@ -10,18 +10,11 @@ class('StoreAnimation').extends(gfx.sprite)
 
 function StoreAnimation:init()
     StoreAnimation.super.init(self)
-    local bahbahblacksheep = math.random(1,2)
+    --local bahbahblacksheep = math.random(1,2)
 
     --print("bahbahblacksheep: "..bahbahblacksheep)
-    local string = "images/Cafe_Atnight-table-143-194"
-
-    if bahbahblacksheep == 1 then
+    local string = "images/Cafe_Day-table-143-194"
     
-        string = "images/Cafe_Day-table-143-194"
-    else
-
-        string = "images/Cafe_Atnight-table-143-194"
-    end
     self.imagetable = playdate.graphics.imagetable.new(string)
 
     self.animation = gfx.animation.loop.new(400, self.imagetable, true)
