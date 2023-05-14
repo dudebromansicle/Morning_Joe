@@ -25,6 +25,10 @@ function Card:init(place)
         cardImage = gfx.image.new("images/Pistachio_Small")
     elseif place == 6 then
         cardImage = gfx.image.new("images/Cinnamon_Small")
+    elseif place == 7 then
+        cardImage = gfx.image.new("images/Caramel_Small")
+    elseif place == 8 then
+        cardImage = gfx.image.new("images/CondensedMilk_Small")
     end
     
     self:setImage(cardImage)
@@ -32,7 +36,7 @@ function Card:init(place)
 
     
     
-    self:moveTo(50+(58*(place-1)),200)
+    self:moveTo(25+(50*(place-1)),200)
 
     self.MyX = self.x
     
@@ -68,10 +72,10 @@ function Card:update()
     self:setZIndex(200)
     else
         if self.spot == currentingrident then
-            self.MyX = 50+(58*(self.spot-1))
+            self.MyX = 25+(50*(self.spot-1))
             self.MyY = 180 
         else
-            self.MyX = 50+(58*(self.spot-1))
+            self.MyX = 25+(50*(self.spot-1))
             self.MyY = 195 
         end
 

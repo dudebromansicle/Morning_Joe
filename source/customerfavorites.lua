@@ -60,6 +60,10 @@ function CustomerFavorites:init(CustomerName,place)
         cardImage = gfx.image.new("images/Pistachio_Small_SMALL")
     elseif Favorites[place] == 6 then
         cardImage = gfx.image.new("images/Cinnamon_Small_SMALL")
+    elseif Favorites[place] == 7 then
+        cardImage = gfx.image.new("images/Caramel_Small_SMALL")
+    elseif Favorites[place] == 8 then
+        cardImage = gfx.image.new("images/CondensedMilk_Small_SMALL")
     end
     
     

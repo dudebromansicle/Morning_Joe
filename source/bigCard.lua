@@ -26,6 +26,10 @@ function BigCard:init(MyLocation, place)
         cardImage = gfx.image.new("images/Pistachio_Big")
     elseif place == 6 then
         cardImage = gfx.image.new("images/Cinnamon_Big")
+    elseif place == 7 then
+        cardImage = gfx.image.new("images/Caramel_Big")
+    elseif place == 8 then
+        cardImage = gfx.image.new("images/CondensedMilk_Big")
     end
     
     self:setImage(cardImage)
@@ -34,7 +38,7 @@ function BigCard:init(MyLocation, place)
     
     
     
-    self:moveTo(50+(58*(place-1)),180)
+    self:moveTo(25+(50*(place-1)),180)
 
     self.MyX = ((MyLocation-1)*64)-30
     

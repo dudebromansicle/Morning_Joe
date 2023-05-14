@@ -75,14 +75,14 @@ function RandomizeFavorites()
     local a = 100
     local b = 100
     local c = 100
-    a = math.random(1,6)
-    b = math.random(1,6)
+    a = math.random(1,8)
+    b = math.random(1,8)
     while b == a do
-        b = math.random(1,6)
+        b = math.random(1,8)
     end
-    c = math.random(1,6)
+    c = math.random(1,8)
     while c == a or c == b do
-        c = math.random(1,6)
+        c = math.random(1,8)
     end
     AnnaFavorites = {a, b, c}
     
@@ -93,14 +93,14 @@ function RandomizeFavorites()
     local a = 100
     local b = 100
     local c = 100
-    a = math.random(1,6)
-    b = math.random(1,6)
+    a = math.random(1,8)
+    b = math.random(1,8)
     while b == a do
-        b = math.random(1,6)
+        b = math.random(1,8)
     end
-    c = math.random(1,6)
+    c = math.random(1,8)
     while c == a or c == b do
-        c = math.random(1,6)
+        c = math.random(1,8)
     end
     AbigailFavorites = {a, b, c}
     
@@ -112,14 +112,14 @@ function RandomizeFavorites()
     local a = 100
     local b = 100
     local c = 100
-    a = math.random(1,6)
-    b = math.random(1,6)
+    a = math.random(1,8)
+    b = math.random(1,8)
     while b == a do
-        b = math.random(1,6)
+        b = math.random(1,8)
     end
-    c = math.random(1,6)
+    c = math.random(1,8)
     while c == a or c == b do
-        c = math.random(1,6)
+        c = math.random(1,8)
     end
     GavinFavorites = {a, b, c}
     
@@ -130,14 +130,14 @@ function RandomizeFavorites()
     local a = 100
     local b = 100
     local c = 100
-    a = math.random(1,6)
-    b = math.random(1,6)
+    a = math.random(1,8)
+    b = math.random(1,8)
     while b == a do
-        b = math.random(1,6)
+        b = math.random(1,8)
     end
-    c = math.random(1,6)
+    c = math.random(1,8)
     while c == a or c == b do
-        c = math.random(1,6)
+        c = math.random(1,8)
     end
     JaiceFavorites = {a, b, c}
     

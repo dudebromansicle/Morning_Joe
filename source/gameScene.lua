@@ -54,7 +54,7 @@ function GameScene:init()
     self:add()
     self.currentpick = 1
     self.drinkmade = false
-    MyMax = 6
+    MyMax = 8
     CreateDecks(MyMax)
     
     for i = 1,#Solvedlist do 

@@ -130,6 +130,44 @@ function Finalcard:init(myID)
         end
 
         Addicon(myID, testingtext)
+    elseif SelectionArray[myID] == 7 then
+        cardImage = gfx.image.new("images/Caramel_Small_SMALL")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 7 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 7 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
+    elseif SelectionArray[myID] == 8 then
+        cardImage = gfx.image.new("images/CondensedMilk_Small_SMALL")
+        local testingtext = "bad"
+        
+        
+        for i = 1,3 do 
+            
+            if Favorites[i] == 8 then
+                testingtext = "good"
+        
+            end
+        end
+        
+        
+        if Favorites[myID] == 8 then
+            testingtext = "great"
+        end
+
+        Addicon(myID, testingtext)
     end
     
     self:setImage(cardImage)
@@ -137,7 +175,7 @@ function Finalcard:init(myID)
 
     
     
-    self:moveTo(26+48*(myID-1),74)
+    self:moveTo(2+48*(myID-1),74)
 
     self.MyX = 26+48*(myID-1)
     
