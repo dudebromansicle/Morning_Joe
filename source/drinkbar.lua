@@ -29,6 +29,25 @@ end
 
 function DrinkBarIncrease(Addition)
     DrinkBarsLength = DrinkBarsLength + math.abs(Addition)
+
+    if math.abs(Addition) > 0 then
+        local whoppity = math.random(1,3)
+        local swipesound = 	pd.sound.fileplayer.new("sounds/CrankingSound_1")  
+        if whoppity == 1 then
+            swipesound = 	pd.sound.fileplayer.new("sounds/CrankingSound_1")            
+        end
+        if whoppity == 2 then
+            swipesound = 	pd.sound.fileplayer.new("sounds/CrankingSound_2")            
+        end
+        
+        if whoppity == 3 then
+            swipesound = 	pd.sound.fileplayer.new("sounds/CrankingSound_3")            
+        end
+        
+        
+        swipesound:setVolume(0.1)
+        swipesound:play(1)
+    end
     if DrinkBarsLength < 1 then
         DrinkBarsLength = 1
     end

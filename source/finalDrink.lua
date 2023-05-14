@@ -54,6 +54,29 @@ function FinalDrink:init()
     Steam()
 
 
+    local swipesound = 	pd.sound.fileplayer.new("sounds/Steam")
+    --platformlanding:setVolume(0.01)
+    swipesound:play(1)
+
+
+    
+    local whoppity = math.random(1,3)
+        local talksound = 	pd.sound.fileplayer.new("sounds/Talking_1")  
+        if whoppity == 1 then
+            talksound = 	pd.sound.fileplayer.new("sounds/Talking_1")            
+        end
+        if whoppity == 2 then
+            talksound = 	pd.sound.fileplayer.new("sounds/Talking_2")            
+        end
+        
+        if whoppity == 3 then
+            talksound = 	pd.sound.fileplayer.new("sounds/Talking_3")            
+        end
+        
+        
+        --swipesound:setVolume(0.1)
+        talksound:play(1)
+    
 
 end
 

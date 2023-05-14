@@ -152,6 +152,12 @@ function StartScene:update()
    
     if pd.buttonJustPressed(pd.kButtonA) then
         SCENE_MANAGER:switchScene(GameScene)
+        
+        local mystartsound = 	pd.sound.fileplayer.new("sounds/Clickonsomethingstart")
+        mystartsound:setVolume(1)
+        mystartsound:play(1)
+
+        
     end
 
 end

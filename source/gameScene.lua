@@ -37,6 +37,11 @@ function GameScene:init()
 		end
 	)
 
+    backsound = 	pd.sound.fileplayer.new("sounds/cafe_enviroment_sound")
+    backsound:setVolume(0.1)
+    backsound:play(0)
+
+
     NumberCorrect = 0
     Nomoreinput = false
     crankinstruction = false
@@ -70,6 +75,7 @@ function GameScene:init()
     
     CreateFavorites(Whom)
     ThisisCorrect = false
+    self.done = false
 
 end
 
@@ -125,7 +131,7 @@ function GameScene:update()
         Ingrident(1)
         
         local swipesound = 	pd.sound.fileplayer.new("sounds/Slide")
-        --platformlanding:setVolume(0.01)
+        swipesound:setVolume(0.2)
         swipesound:play(1)
     end
 
@@ -133,7 +139,7 @@ function GameScene:update()
         Ingrident(-1)
         
         local swipesound = 	pd.sound.fileplayer.new("sounds/Slide")
-        --platformlanding:setVolume(0.01)
+        swipesound:setVolume(0.2)
         swipesound:play(1)
     end
     --add drink made
@@ -165,8 +171,12 @@ function GameScene:update()
         
         end
     end
-    if pd.buttonJustPressed(pd.kButtonA) and Nomoreinput == true then
+    if pd.buttonJustPressed(pd.kButtonA) and Nomoreinput == true and self.done == false then
        
+        local mystartsound = 	pd.sound.fileplayer.new("sounds/Clickonsomethingstart")
+        mystartsound:setVolume(1)
+        mystartsound:play(1)
+
         self.drinkmade = true 
         crankinstruction = false
         
@@ -206,10 +216,16 @@ function GameScene:update()
 
 
         print("DrinksCorrect:" ..DrinksCorrect)
+        
+        
         if CustomerNumber == 4-TotalSolved then
             SCENE_MANAGER:switchScene(GameOverScene)
+            backsound:stop()
+            self.done = true
         else
+            backsound:stop()
             SCENE_MANAGER:switchScene(GameScene)
+            self.done = true
         end
        
     end
@@ -221,7 +237,7 @@ function GameScene:update()
         BigCard(#SelectionArray+1, currentingrident)
         
         local swipesound = 	pd.sound.fileplayer.new("sounds/Swipe")
-        --platformlanding:setVolume(0.01)
+        swipesound:setVolume(0.8)
         swipesound:play(1)
         
         for i = 1,#SelectionArray do 

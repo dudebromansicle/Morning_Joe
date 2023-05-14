@@ -15,8 +15,6 @@ function WordBubble:init(destroy)
     self:setImage(Dudeimage)
     
     
-    
-    
     self:moveTo(355,95)
     self:setZIndex(11)
     self:add()

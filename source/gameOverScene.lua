@@ -38,6 +38,11 @@ end
 
 function GameOverScene:update()
     if pd.buttonJustPressed(pd.kButtonA) then
+        
+        local mystartsound = 	pd.sound.fileplayer.new("sounds/Clickonsomethingstart")
+        mystartsound:setVolume(1)
+        mystartsound:play(1)
+        
         if TotalSolved == 4 then
             SCENE_MANAGER:switchScene(StartScene)
         else

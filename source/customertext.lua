@@ -18,6 +18,26 @@ function CustomerText:init(CustomerName)
     gfx.pushContext(gameOverImage)
         gfx.drawText(CustomerName, 0, 0)
     gfx.popContext()
+    local FirstBulletTimer = pd.timer.performAfterDelay(300, function ()
+        local whoppity = math.random(1,3)
+        local swipesound = 	pd.sound.fileplayer.new("sounds/Talking_1")  
+        if whoppity == 1 then
+            swipesound = 	pd.sound.fileplayer.new("sounds/Talking_1")            
+        end
+        if whoppity == 2 then
+            swipesound = 	pd.sound.fileplayer.new("sounds/Talking_2")            
+        end
+        
+        if whoppity == 3 then
+            swipesound = 	pd.sound.fileplayer.new("sounds/Talking_3")            
+        end
+        
+        
+        --swipesound:setVolume(0.1)
+        swipesound:play(1)
+    
+		
+		end)
     
     
     --self:setImage(gameOverImage)
