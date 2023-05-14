@@ -4,6 +4,7 @@ import "gameScene"
 import "smallcard"
 import "smokescreen"
 
+import "pressA"
 import "steam"
 
 local pd <const> = playdate
@@ -76,6 +77,7 @@ function FinalDrink:init()
         
         --swipesound:setVolume(0.1)
         talksound:play(1)
+        PressA()
     
 
 end
