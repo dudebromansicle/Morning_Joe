@@ -20,7 +20,7 @@ function FinalDrink:init()
     local Dudeimage = gfx.image.new("images/Cup1")
 
     local holymoly = math.random(1,3)
-    print("holymoly: "..holymoly)
+    --print("holymoly: "..holymoly)
     if holymoly == 1 then
         Dudeimage = gfx.image.new("images/Cup1")
     elseif holymoly == 2 then

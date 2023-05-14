@@ -15,14 +15,16 @@ function GameOverScene:init(text)
     CloseStore()
     TotalSolved = TotalSolved+DrinksCorrect
     
-    print("DrinksCorrect:" ..DrinksCorrect)
+    --print("DrinksCorrect:" ..DrinksCorrect)
     local text = "Broken"
     if TotalSolved == 4 then
         text = "Congrats!  It took you "..Days.." days to win."
         
-        for i = 1,4 do 
+        Startmusic:stop()
+        for i = 1,3 do 
             Credits(i)
         end
+        Finalmusic:play()
     else
         text = "Day "..Days..". You have made ".. TotalSolved .. " perfect drinks so far."
     end

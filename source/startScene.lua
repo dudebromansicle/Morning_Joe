@@ -1,4 +1,6 @@
 import "gameScene"
+import "startstore"
+
 
 
 local pd <const> = playdate
@@ -17,7 +19,7 @@ function StartScene:init()
 			gfx.clearClipRect()
 		end
 	)
-    
+    StoreAnimation()
     Days = 0
     CustomerNumber = 0
     DrinksCorrect = 0
@@ -37,15 +39,33 @@ function StartScene:init()
     
     RandomizeOrder()
 
+    
+    if Finalmusic ~= nil then
+        
+        Finalmusic:stop()
+        --print("stop start music")
+    else
+        Finalmusic = 	pd.sound.fileplayer.new("sounds/soundtrack_1")
+        Finalmusic:setVolume(1)
+    end
+
     if Startmusic ~= nil then
         
         Startmusic:stop()
-        print("stop start music")
+        --print("stop start music")
     else
         Startmusic = 	pd.sound.fileplayer.new("sounds/playjam_soundtrack")
         Startmusic:setVolume(1)
     end
-    
+    if otherStartmusic ~= nil then
+        
+        otherStartmusic:play()
+    else
+        
+        otherStartmusic = 	pd.sound.fileplayer.new("sounds/soundtrack")
+        otherStartmusic:setVolume(1)
+        otherStartmusic:play()
+    end
     
 end
 
@@ -67,7 +87,7 @@ function RandomizeFavorites()
     AnnaFavorites = {a, b, c}
     
     for i = 1,#AnnaFavorites do 
-        print("AnnaFavorites:"..AnnaFavorites[i])
+        --print("AnnaFavorites:"..AnnaFavorites[i])
     end
     
     local a = 100
@@ -85,7 +105,7 @@ function RandomizeFavorites()
     AbigailFavorites = {a, b, c}
     
     for i = 1,#AbigailFavorites do 
-        print("AbigailFavorites:"..AbigailFavorites[i])
+        --print("AbigailFavorites:"..AbigailFavorites[i])
     end
     --Men
     
@@ -104,7 +124,7 @@ function RandomizeFavorites()
     GavinFavorites = {a, b, c}
     
     for i = 1,#GavinFavorites do 
-        print("GavinFavorites:"..GavinFavorites[i])
+        --print("GavinFavorites:"..GavinFavorites[i])
     end
     
     local a = 100
@@ -122,7 +142,7 @@ function RandomizeFavorites()
     JaiceFavorites = {a, b, c}
     
     for i = 1,#JaiceFavorites do 
-        print("JaiceFavorites:"..JaiceFavorites[i])
+        --print("JaiceFavorites:"..JaiceFavorites[i])
     end
     
 end
@@ -155,14 +175,14 @@ function RandomizeOrder()
 
     
     for i = 1,#CustomerOrder do 
-        print(i, "CustomerOrder:"..CustomerOrder[i])
+        --print(i, "CustomerOrder:"..CustomerOrder[i])
     end
 end
 
 function StartScene:update()
    
     if pd.buttonJustPressed(pd.kButtonA) then
-        
+        otherStartmusic:stop()
         Startmusic:play(0)
         SCENE_MANAGER:switchScene(GameScene)
         
