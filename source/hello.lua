@@ -1,5 +1,6 @@
 import "gamescene"
 import "wordbubble"
+import "randomhello"
 import "CoreLibs/timer"
 
 local pd <const> = playdate
@@ -12,6 +13,8 @@ function HelloText:init(CustomerName)
 	HelloText.super.init(self)
     
     local hellomynameis = "Mornin' Joe!"
+
+    
     
     local gameOverImage = gfx.image.new(gfx.getTextSize(hellomynameis))
     gfx.pushContext(gameOverImage)
@@ -21,13 +24,14 @@ function HelloText:init(CustomerName)
     
     self:setImage(gameOverImage)
     
-    self:moveTo(250+self.width/2, 130)
+    self:moveTo(180+self.width/2, 120)
     
     self:setZIndex(151)
 
     self:add()
     self.destruction = pd.timer.new(2000)
     WordBubble(true)
+    RandomHello()
 
 
 end
