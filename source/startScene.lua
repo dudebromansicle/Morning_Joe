@@ -9,19 +9,27 @@ class('StartScene').extends(gfx.sprite)
 function StartScene:init()
 	
     
+    local backgroundImage = gfx.image.new("images/Menu_Attempt1")
+    gfx.sprite.setBackgroundDrawingCallback(
+        function( x, y, width, height )
+			gfx.setClipRect(x, y, width, height)
+			backgroundImage:draw(0,0)
+			gfx.clearClipRect()
+		end
+	)
     
     Days = 0
     CustomerNumber = 0
     DrinksCorrect = 0
     CustomerOrder = {1,2,3,4,5,6}
-    local text = "This Will be the Start Screen"
-    local gameOverImage = gfx.image.new(gfx.getTextSize(text))
-    gfx.pushContext(gameOverImage)
-        gfx.drawText(text, 0, 0)
-    gfx.popContext()
-    local gameOverSprite = gfx.sprite.new(gameOverImage)
-    gameOverSprite:moveTo(200, 120)
-    gameOverSprite:add()
+    --local text = "This Will be the Start Screen"
+    --local gameOverImage = gfx.image.new(gfx.getTextSize(text))
+    --gfx.pushContext(gameOverImage)
+    --    gfx.drawText(text, 0, 0)
+    --gfx.popContext()
+    --local gameOverSprite = gfx.sprite.new(gameOverImage)
+    --gameOverSprite:moveTo(200, 120)
+    --gameOverSprite:add()
     Solvedlist = {}
     TotalSolved = 0
     self:add()
