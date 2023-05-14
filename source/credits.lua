@@ -14,19 +14,20 @@ function Credits:init(mynumberbaby)
     Dudeimage = gfx.image.new("images/MP_Credit")
     
     if mynumberbaby == 1 then
-        Dudeimage = gfx.image.new("images/RH_Credit")
+        Dudeimage = gfx.image.new("images/KK_Credit")
     end
     
     if mynumberbaby == 2 then
-        Dudeimage = gfx.image.new("images/MP_Credit")
+        Dudeimage = gfx.image.new("images/VC_Credit")
     end
     
     if mynumberbaby == 3 then
-        Dudeimage = gfx.image.new("images/RH_Credit")
+        
+        Dudeimage = gfx.image.new("images/MP_Credit")
     end
     
     if mynumberbaby == 4 then
-        Dudeimage = gfx.image.new("images/MP_Credit")
+        Dudeimage = gfx.image.new("images/RH_Credit")
     end
 
     self:setImage(Dudeimage)
@@ -34,7 +35,7 @@ function Credits:init(mynumberbaby)
     
     
     
-    self:moveTo(-400+300*(mynumberbaby),160)
+    self:moveTo(-1200+300*(mynumberbaby),160)
     self:setZIndex(300)
     self:add()
     
@@ -44,7 +45,7 @@ end
 
 function Credits:update() 
     
-    self:moveTo(self.x+2,160)
+    self:moveTo(self.x+3,160)
 
     if self.x > 800 then
         self:moveTo(-400,160)
