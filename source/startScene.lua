@@ -1,4 +1,6 @@
 import "gameScene"
+import "startstore"
+
 
 
 local pd <const> = playdate
@@ -17,7 +19,7 @@ function StartScene:init()
 			gfx.clearClipRect()
 		end
 	)
-    
+    StoreAnimation()
     Days = 0
     CustomerNumber = 0
     DrinksCorrect = 0
@@ -37,6 +39,16 @@ function StartScene:init()
     
     RandomizeOrder()
 
+    
+    if Finalmusic ~= nil then
+        
+        Finalmusic:stop()
+        print("stop start music")
+    else
+        Finalmusic = 	pd.sound.fileplayer.new("sounds/soundtrack_1")
+        Finalmusic:setVolume(1)
+    end
+
     if Startmusic ~= nil then
         
         Startmusic:stop()
@@ -45,7 +57,15 @@ function StartScene:init()
         Startmusic = 	pd.sound.fileplayer.new("sounds/playjam_soundtrack")
         Startmusic:setVolume(1)
     end
-    
+    if otherStartmusic ~= nil then
+        
+        otherStartmusic:play()
+    else
+        
+        otherStartmusic = 	pd.sound.fileplayer.new("sounds/soundtrack")
+        otherStartmusic:setVolume(1)
+        otherStartmusic:play()
+    end
     
 end
 
@@ -162,7 +182,7 @@ end
 function StartScene:update()
    
     if pd.buttonJustPressed(pd.kButtonA) then
-        
+        otherStartmusic:stop()
         Startmusic:play(0)
         SCENE_MANAGER:switchScene(GameScene)
         
