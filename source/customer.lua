@@ -19,19 +19,19 @@ function Customer:init(place)
 
     if place == 1 then
         CustomerText("Abigail")
-        local Dudeimage = gfx.image.new("images/Viking")
+        local Dudeimage = gfx.image.new(customer1)
         self:setImage(Dudeimage)
     elseif place == 2 then
         CustomerText("Anna")
-        local Dudeimage = gfx.image.new("images/Stinkygirl")
+        local Dudeimage = gfx.image.new(customer2)
         self:setImage(Dudeimage)
     elseif place == 3 then
         CustomerText("Jaice")
-        local Dudeimage = gfx.image.new("images/PrettyMan")
+        local Dudeimage = gfx.image.new(customer3)
         self:setImage(Dudeimage)        
     elseif place == 4 then
         CustomerText("Gavin")
-        local Dudeimage = gfx.image.new("images/Scientist")
+        local Dudeimage = gfx.image.new(customer4)
         self:setImage(Dudeimage)
      
     else

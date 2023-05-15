@@ -39,6 +39,8 @@ function StartScene:init()
     
     RandomizeOrder()
 
+    RandomizeCustomers()
+
     
     if Finalmusic ~= nil then
         
@@ -68,6 +70,119 @@ function StartScene:init()
     end
     
 end
+function RandomizeCustomers()
+    local a = 100
+    local b = 100
+    local c = 100
+    local d = 100
+
+    a = math.random(1,5)
+    b = math.random(1,5)
+    while b == a do
+        b = math.random(1,5)
+    end
+
+    c = math.random(1,5)
+    while c == a or c == b do
+        c = math.random(1,5)
+    end
+    
+    d = math.random(1,5)
+    while d == a or d == b  or d == c do
+        d = math.random(1,5)
+    end
+    customer1 = "images/Dude"
+    customer2 = "images/Dude"
+    customer3 = "images/Dude"
+    customer4 = "images/Dude"
+
+    if a == 1 then
+        customer1 = "images/Viking"
+    elseif a == 2 then
+        customer1 = "images/Cowboy"
+    elseif a == 3 then
+        customer1 = "images/Scientist"
+    elseif a == 4 then
+        customer1 = "images/PrettyMan"
+    elseif a == 5 then
+        customer1 = "images/Stinkygirl"
+    elseif a == 6 then
+        customer1 = "images/PrettyMan"
+    elseif a == 7 then
+        customer1 = "images/Scientist"
+    elseif a == 8 then
+        customer1 = "images/Stinkygirl"
+    elseif a == 9 then
+        customer1 = "images/Viking"
+    end
+
+
+    if b == 1 then
+        customer2 = "images/Viking"
+    elseif b == 2 then
+        customer2 = "images/Cowboy"
+    elseif b == 3 then
+        customer2 = "images/Scientist"
+    elseif b == 4 then
+        customer2 = "images/PrettyMan"
+    elseif b == 5 then
+        customer2 = "images/Stinkygirl"
+    elseif b == 6 then
+        customer2 = "images/PrettyMan"
+    elseif b == 7 then
+        customer2 = "images/Scientist"
+    elseif b == 8 then
+        customer2 = "images/Stinkygirl"
+    elseif b == 9 then
+        customer2 = "images/Viking"
+    end
+
+    if c == 1 then
+        customer3 = "images/Viking"
+    elseif c == 2 then
+        customer3 = "images/Cowboy"
+    elseif c == 3 then
+        customer3 = "images/Scientist"
+    elseif c == 4 then
+        customer3 = "images/PrettyMan"
+    elseif c == 5 then
+        customer3 = "images/Stinkygirl"
+    elseif c == 6 then
+        customer3 = "images/PrettyMan"
+    elseif c == 7 then
+        customer3 = "images/Scientist"
+    elseif c == 8 then
+        customer3 = "images/Stinkygirl"
+    elseif c == 9 then
+        customer3 = "images/Viking"
+    end
+
+    if d == 1 then
+        customer4 = "images/Viking"
+    elseif d == 2 then
+        customer4 = "images/Cowboy"
+    elseif d == 3 then
+        customer4 = "images/Scientist"
+    elseif d == 4 then
+        customer4 = "images/PrettyMan"
+    elseif d == 5 then
+        customer4 = "images/Stinkygirl"
+    elseif d == 6 then
+        customer4 = "images/PrettyMan"
+    elseif d == 7 then
+        customer4 = "images/Scientist"
+    elseif d == 8 then
+        customer4 = "images/Stinkygirl"
+    elseif d == 9 then
+        customer4 = "images/Viking"
+    end
+
+
+
+
+
+end
+    
 
 function RandomizeFavorites()
     --Woman
