@@ -65,7 +65,7 @@ function StartScene:init()
     else
         
         otherStartmusic = 	pd.sound.fileplayer.new("sounds/soundtrack")
-        otherStartmusic:setVolume(0.8)
+        otherStartmusic:setVolume(0.6)
         otherStartmusic:play()
     end
     
