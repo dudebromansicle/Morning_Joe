@@ -1,9 +1,2 @@
-name=Mornin' Joe
-author=Mattpat.
-description=Serve your customers some coffee.
-bundleID=com.panic.MorninJoe
-version=1.01
-buildNumber=123
-imagePath=System
 pdxversion=11300
-buildtime=737464716
+buildtime=737482746

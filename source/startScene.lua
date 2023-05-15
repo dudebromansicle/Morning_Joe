@@ -48,7 +48,7 @@ function StartScene:init()
         --print("stop start music")
     else
         Finalmusic = 	pd.sound.fileplayer.new("sounds/soundtrack_1")
-        Finalmusic:setVolume(1)
+        Finalmusic:setVolume(0.8)
     end
 
     if Startmusic ~= nil then
@@ -57,7 +57,7 @@ function StartScene:init()
         --print("stop start music")
     else
         Startmusic = 	pd.sound.fileplayer.new("sounds/playjam_soundtrack")
-        Startmusic:setVolume(1)
+        Startmusic:setVolume(0.8)
     end
     if otherStartmusic ~= nil then
         
@@ -65,7 +65,7 @@ function StartScene:init()
     else
         
         otherStartmusic = 	pd.sound.fileplayer.new("sounds/soundtrack")
-        otherStartmusic:setVolume(1)
+        otherStartmusic:setVolume(0.8)
         otherStartmusic:play()
     end
     
@@ -115,59 +115,59 @@ function RandomizeCustomers()
     end
 
     if b == 1 then
-        customer1 = "images/Viking"
+        customer2 = "images/Viking"
     elseif b == 2 then
-        customer1 = "images/Cowboy"
+        customer2 = "images/Cowboy"
     elseif b == 3 then
-        customer1 = "images/Scientist"
+        customer2 = "images/Scientist"
     elseif b == 4 then
-        customer1 = "images/PrettyMan"
+        customer2 = "images/PrettyMan"
     elseif b == 5 then
-        customer1 = "images/Stinkygirl"
+        customer2 = "images/Stinkygirl"
     elseif b == 6 then
-        customer1 = "images/Queen"
+        customer2 = "images/Queen"
     elseif b == 7 then
-        customer1 = "images/Astronauht"
+        customer2 = "images/Astronauht"
     elseif b == 8 then
-        customer1 = "images/ArtistGirl"
+        customer2 = "images/ArtistGirl"
     end
 
 
     if c == 1 then
-        customer1 = "images/Viking"
+        customer3 = "images/Viking"
     elseif c == 2 then
-        customer1 = "images/Cowboy"
+        customer3 = "images/Cowboy"
     elseif c == 3 then
-        customer1 = "images/Scientist"
+        customer3 = "images/Scientist"
     elseif c == 4 then
-        customer1 = "images/PrettyMan"
+        customer3 = "images/PrettyMan"
     elseif c == 5 then
-        customer1 = "images/Stinkygirl"
+        customer3 = "images/Stinkygirl"
     elseif c == 6 then
-        customer1 = "images/Queen"
+        customer3 = "images/Queen"
     elseif c == 7 then
-        customer1 = "images/Astronauht"
+        customer3 = "images/Astronauht"
     elseif c == 8 then
-        customer1 = "images/ArtistGirl"
+        customer3 = "images/ArtistGirl"
     end
 
 
     if d == 1 then
-        customer1 = "images/Viking"
+        customer4 = "images/Viking"
     elseif d == 2 then
-        customer1 = "images/Cowboy"
+        customer4 = "images/Cowboy"
     elseif d == 3 then
-        customer1 = "images/Scientist"
+        customer4 = "images/Scientist"
     elseif d == 4 then
-        customer1 = "images/PrettyMan"
+        customer4 = "images/PrettyMan"
     elseif d == 5 then
-        customer1 = "images/Stinkygirl"
+        customer4 = "images/Stinkygirl"
     elseif d == 6 then
-        customer1 = "images/Queen"
+        customer4 = "images/Queen"
     elseif d == 7 then
-        customer1 = "images/Astronauht"
+        customer4 = "images/Astronauht"
     elseif d == 8 then
-        customer1 = "images/ArtistGirl"
+        customer4 = "images/ArtistGirl"
     end
 
 
