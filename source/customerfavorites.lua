@@ -43,8 +43,8 @@ function CustomerFavorites:init(CustomerName,place)
 
      
     -- for i = 1, 3 do
-    --     print("Favorites[i]: "..Favorites[i])
-    -- end
+    --      print("Favorites[i]: "..Favorites[i])
+    --  end
     
     local cardImage = gfx.image.new("images/Chocolate_Small_SMALL")
 

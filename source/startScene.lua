@@ -48,7 +48,7 @@ function StartScene:init()
         --print("stop start music")
     else
         Finalmusic = 	pd.sound.fileplayer.new("sounds/soundtrack_1")
-        Finalmusic:setVolume(0.8)
+        Finalmusic:setVolume(0.6)
     end
 
     if Startmusic ~= nil then
@@ -57,7 +57,7 @@ function StartScene:init()
         --print("stop start music")
     else
         Startmusic = 	pd.sound.fileplayer.new("sounds/playjam_soundtrack")
-        Startmusic:setVolume(0.8)
+        Startmusic:setVolume(0.6)
     end
     if otherStartmusic ~= nil then
         
@@ -65,7 +65,7 @@ function StartScene:init()
     else
         
         otherStartmusic = 	pd.sound.fileplayer.new("sounds/soundtrack")
-        otherStartmusic:setVolume(0.6)
+        otherStartmusic:setVolume(1)
         otherStartmusic:play()
     end
     
@@ -76,20 +76,20 @@ function RandomizeCustomers()
     local c = 100
     local d = 100
 
-    a = math.random(1,8)
-    b = math.random(1,8)
+    a = math.random(1,9)
+    b = math.random(1,9)
     while b == a do
-        b = math.random(1,8)
+        b = math.random(1,9)
     end
 
-    c = math.random(1,8)
+    c = math.random(1,9)
     while c == a or c == b do
-        c = math.random(1,8)
+        c = math.random(1,9)
     end
     
-    d = math.random(1,8)
+    d = math.random(1,9)
     while d == a or d == b  or d == c do
-        d = math.random(1,8)
+        d = math.random(1,9)
     end
     customer1 = "images/Dude"
     customer2 = "images/Dude"
@@ -112,6 +112,8 @@ function RandomizeCustomers()
         customer1 = "images/Astronauht"
     elseif a == 8 then
         customer1 = "images/ArtistGirl"
+    elseif a == 9 then
+        customer1 = "images/SkeleBbay"
     end
 
     if b == 1 then
@@ -130,6 +132,8 @@ function RandomizeCustomers()
         customer2 = "images/Astronauht"
     elseif b == 8 then
         customer2 = "images/ArtistGirl"
+    elseif b == 9 then
+        customer2 = "images/SkeleBbay"
     end
 
 
@@ -149,6 +153,8 @@ function RandomizeCustomers()
         customer3 = "images/Astronauht"
     elseif c == 8 then
         customer3 = "images/ArtistGirl"
+    elseif c == 9 then
+        customer3 = "images/SkeleBbay"
     end
 
 
@@ -168,6 +174,8 @@ function RandomizeCustomers()
         customer4 = "images/Astronauht"
     elseif d == 8 then
         customer4 = "images/ArtistGirl"
+    elseif d == 9 then
+        customer4 = "images/SkeleBbay"
     end
 
 
