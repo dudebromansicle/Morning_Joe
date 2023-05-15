@@ -76,20 +76,20 @@ function RandomizeCustomers()
     local c = 100
     local d = 100
 
-    a = math.random(1,5)
-    b = math.random(1,5)
+    a = math.random(1,8)
+    b = math.random(1,8)
     while b == a do
-        b = math.random(1,5)
+        b = math.random(1,8)
     end
 
-    c = math.random(1,5)
+    c = math.random(1,8)
     while c == a or c == b do
-        c = math.random(1,5)
+        c = math.random(1,8)
     end
     
-    d = math.random(1,5)
+    d = math.random(1,8)
     while d == a or d == b  or d == c do
-        d = math.random(1,5)
+        d = math.random(1,8)
     end
     customer1 = "images/Dude"
     customer2 = "images/Dude"
@@ -107,77 +107,68 @@ function RandomizeCustomers()
     elseif a == 5 then
         customer1 = "images/Stinkygirl"
     elseif a == 6 then
-        customer1 = "images/PrettyMan"
+        customer1 = "images/Queen"
     elseif a == 7 then
-        customer1 = "images/Scientist"
+        customer1 = "images/Astronauht"
     elseif a == 8 then
-        customer1 = "images/Stinkygirl"
-    elseif a == 9 then
-        customer1 = "images/Viking"
+        customer1 = "images/ArtistGirl"
     end
-
 
     if b == 1 then
-        customer2 = "images/Viking"
+        customer1 = "images/Viking"
     elseif b == 2 then
-        customer2 = "images/Cowboy"
+        customer1 = "images/Cowboy"
     elseif b == 3 then
-        customer2 = "images/Scientist"
+        customer1 = "images/Scientist"
     elseif b == 4 then
-        customer2 = "images/PrettyMan"
+        customer1 = "images/PrettyMan"
     elseif b == 5 then
-        customer2 = "images/Stinkygirl"
+        customer1 = "images/Stinkygirl"
     elseif b == 6 then
-        customer2 = "images/PrettyMan"
+        customer1 = "images/Queen"
     elseif b == 7 then
-        customer2 = "images/Scientist"
+        customer1 = "images/Astronauht"
     elseif b == 8 then
-        customer2 = "images/Stinkygirl"
-    elseif b == 9 then
-        customer2 = "images/Viking"
+        customer1 = "images/ArtistGirl"
     end
+
 
     if c == 1 then
-        customer3 = "images/Viking"
+        customer1 = "images/Viking"
     elseif c == 2 then
-        customer3 = "images/Cowboy"
+        customer1 = "images/Cowboy"
     elseif c == 3 then
-        customer3 = "images/Scientist"
+        customer1 = "images/Scientist"
     elseif c == 4 then
-        customer3 = "images/PrettyMan"
+        customer1 = "images/PrettyMan"
     elseif c == 5 then
-        customer3 = "images/Stinkygirl"
+        customer1 = "images/Stinkygirl"
     elseif c == 6 then
-        customer3 = "images/PrettyMan"
+        customer1 = "images/Queen"
     elseif c == 7 then
-        customer3 = "images/Scientist"
+        customer1 = "images/Astronauht"
     elseif c == 8 then
-        customer3 = "images/Stinkygirl"
-    elseif c == 9 then
-        customer3 = "images/Viking"
+        customer1 = "images/ArtistGirl"
     end
+
 
     if d == 1 then
-        customer4 = "images/Viking"
+        customer1 = "images/Viking"
     elseif d == 2 then
-        customer4 = "images/Cowboy"
+        customer1 = "images/Cowboy"
     elseif d == 3 then
-        customer4 = "images/Scientist"
+        customer1 = "images/Scientist"
     elseif d == 4 then
-        customer4 = "images/PrettyMan"
+        customer1 = "images/PrettyMan"
     elseif d == 5 then
-        customer4 = "images/Stinkygirl"
+        customer1 = "images/Stinkygirl"
     elseif d == 6 then
-        customer4 = "images/PrettyMan"
+        customer1 = "images/Queen"
     elseif d == 7 then
-        customer4 = "images/Scientist"
+        customer1 = "images/Astronauht"
     elseif d == 8 then
-        customer4 = "images/Stinkygirl"
-    elseif d == 9 then
-        customer4 = "images/Viking"
+        customer1 = "images/ArtistGirl"
     end
-
-
 
 
 
