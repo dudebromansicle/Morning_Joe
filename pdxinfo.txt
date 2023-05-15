@@ -4,4 +4,4 @@ description=Serve your customers some coffee.
 bundleID=com.panic.MorninJoe
 version=1.00
 buildNumber=123
-imagePath=images/Icon
+imagePath=System
